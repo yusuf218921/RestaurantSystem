@@ -71,7 +71,7 @@
             // textBoxUsername
             // 
             this.textBoxUsername.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBoxUsername.Location = new System.Drawing.Point(334, 152);
+            this.textBoxUsername.Location = new System.Drawing.Point(334, 43);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(100, 20);
             this.textBoxUsername.TabIndex = 3;
