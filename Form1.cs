@@ -74,5 +74,10 @@ namespace RestaurantSystem
             Form3 frm3 = new Form3();
             frm3.Show();
         }
+
+        private void textBoxUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
