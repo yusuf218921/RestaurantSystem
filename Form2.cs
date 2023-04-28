@@ -91,5 +91,30 @@ namespace RestaurantSystem
                 MessageBox.Show("Girmiş olduğunuz Telefon numarası daha önce alınmış lütfen yeni bir Telefon numarası giriniz...");
             }
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxTown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxCity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
