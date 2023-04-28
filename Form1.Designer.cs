@@ -48,7 +48,7 @@
             this.buttonSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSignIn.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSignIn.ForeColor = System.Drawing.Color.White;
-            this.buttonSignIn.Location = new System.Drawing.Point(558, 194);
+            this.buttonSignIn.Location = new System.Drawing.Point(550, 232);
             this.buttonSignIn.Name = "buttonSignIn";
             this.buttonSignIn.Size = new System.Drawing.Size(75, 23);
             this.buttonSignIn.TabIndex = 0;
@@ -58,7 +58,7 @@
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(558, 159);
+            this.textBoxPassword.Location = new System.Drawing.Point(550, 197);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(156, 20);
             this.textBoxPassword.TabIndex = 2;
@@ -66,7 +66,7 @@
             // textBoxUsername
             // 
             this.textBoxUsername.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBoxUsername.Location = new System.Drawing.Point(558, 130);
+            this.textBoxUsername.Location = new System.Drawing.Point(550, 168);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(156, 20);
             this.textBoxUsername.TabIndex = 3;
@@ -78,7 +78,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(442, 130);
+            this.label1.Location = new System.Drawing.Point(434, 168);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 21);
             this.label1.TabIndex = 4;
@@ -90,7 +90,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(504, 158);
+            this.label2.Location = new System.Drawing.Point(496, 196);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 21);
             this.label2.TabIndex = 5;
@@ -104,7 +104,7 @@
             this.buttonSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSignUp.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSignUp.ForeColor = System.Drawing.Color.White;
-            this.buttonSignUp.Location = new System.Drawing.Point(639, 194);
+            this.buttonSignUp.Location = new System.Drawing.Point(631, 232);
             this.buttonSignUp.Name = "buttonSignUp";
             this.buttonSignUp.Size = new System.Drawing.Size(75, 23);
             this.buttonSignUp.TabIndex = 8;
@@ -117,7 +117,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(555, 236);
+            this.label3.Location = new System.Drawing.Point(547, 274);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 13);
             this.label3.TabIndex = 11;
@@ -129,7 +129,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(680, 236);
+            this.label4.Location = new System.Drawing.Point(672, 274);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 13);
             this.label4.TabIndex = 13;
@@ -145,17 +145,16 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(720, 158);
+            this.button1.Location = new System.Drawing.Point(712, 196);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(20, 20);
             this.button1.TabIndex = 14;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            textBoxPassword.UseSystemPasswordChar = true;
             // 
             // panel1
             // 
-            this.panel1.BackgroundImage = global::RestaurantSystem.Properties.Resources.Colorlib_Reg_Form_v7;
+            this.panel1.BackgroundImage = global::RestaurantSystem.Properties.Resources._8e7392e045afce4456720c1aef91c013;
             this.panel1.Location = new System.Drawing.Point(-2, -4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(362, 459);

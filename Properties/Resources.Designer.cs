@@ -63,6 +63,16 @@ namespace RestaurantSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _8e7392e045afce4456720c1aef91c013 {
+            get {
+                object obj = ResourceManager.GetObject("8e7392e045afce4456720c1aef91c013", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Colorlib_Reg_Form_v7 {
             get {
                 object obj = ResourceManager.GetObject("Colorlib-Reg-Form-v7", resourceCulture);

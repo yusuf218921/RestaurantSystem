@@ -79,18 +79,19 @@ namespace RestaurantSystem
             Application.Exit();
         }
 
+        bool doButton1Active = false;
         private void button1_Click(object sender, EventArgs e)
         {
-            bool doActive = false;
-            if (doActive)
+            
+            if (doButton1Active)
             {
                 textBoxPassword.UseSystemPasswordChar = false;
-                doActive = false;
+                doButton1Active = false;
             }
             else
             {
                 textBoxPassword.UseSystemPasswordChar = true;
-                doActive = true;
+                doButton1Active = true;
             }
         }
     }
