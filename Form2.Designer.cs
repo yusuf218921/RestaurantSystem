@@ -271,7 +271,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(577, 349);
+            this.ClientSize = new System.Drawing.Size(670, 402);
             this.Controls.Add(this.checkBoxShowPassword);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.richTextBoxAdress);
