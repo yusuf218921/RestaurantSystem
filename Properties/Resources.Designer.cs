@@ -69,5 +69,25 @@ namespace RestaurantSystem.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eye_password_hide_icon_512x512_iv45hct9 {
+            get {
+                object obj = ResourceManager.GetObject("eye-password-hide-icon-512x512-iv45hct9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap untitled {
+            get {
+                object obj = ResourceManager.GetObject("untitled", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -101,5 +101,11 @@
   <ItemGroup>
     <None Include="Resources\Colorlib-Reg-Form-v7.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye-password-hide-icon-512x512-iv45hct9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\untitled.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

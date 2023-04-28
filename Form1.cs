@@ -46,22 +46,9 @@ namespace RestaurantSystem
             connection.Close();
         }
 
-        private void checkBoxShowPassword_CheckedChanged(object sender, EventArgs e)
-        {
-            if(checkBoxShowPassword.CheckState == CheckState.Checked)
-            {
-                textBoxPassword.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                textBoxPassword.UseSystemPasswordChar = true;
-            }
-        }
+        
 
-        private void buttonClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        
 
         private void buttonSignUp_Click(object sender, EventArgs e)
         {
@@ -85,6 +72,26 @@ namespace RestaurantSystem
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            bool doActive = false;
+            if (doActive)
+            {
+                textBoxPassword.UseSystemPasswordChar = false;
+                doActive = false;
+            }
+            else
+            {
+                textBoxPassword.UseSystemPasswordChar = true;
+                doActive = true;
+            }
         }
     }
 }
