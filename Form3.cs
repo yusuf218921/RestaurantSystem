@@ -26,7 +26,7 @@ namespace RestaurantSystem
         private void buttonControl_Click(object sender, EventArgs e)
         {
             bool control = false;
-            SqlConnection connection = new SqlConnection("Data Source=DESKTOP-DB85IPR;Initial Catalog=RestaurantSystem;User ID=SA;Password=218921aa;");
+            SqlConnection connection = new SqlConnection(@"Data Source=(127.0.0.1)\SQLEXPRESS,1433;Network Library=DBMSSOCN;Initial Catalog=RestaurantSystem;User ID=SA;Password=218921aa");
             connection.Open();
             string queryString = "SELECT * FROM [user]";
             SqlCommand command = new SqlCommand(queryString, connection);
