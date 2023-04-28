@@ -80,6 +80,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.label1.Location = new System.Drawing.Point(264, 155);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 13);
@@ -89,7 +90,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(300, 178);
+            this.label2.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.label2.Location = new System.Drawing.Point(300, 185);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(28, 13);
             this.label2.TabIndex = 5;
@@ -108,19 +110,20 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(54, 373);
+            this.label4.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.label4.Location = new System.Drawing.Point(12, 420);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 13);
+            this.label4.Size = new System.Drawing.Size(99, 13);
             this.label4.TabIndex = 7;
-            this.label4.Text = "hesabınız yok mu ?";
+            this.label4.Text = "Hesabınız Yok Mu?";
             // 
             // buttonSignUp
             // 
-            this.buttonSignUp.Location = new System.Drawing.Point(157, 368);
+            this.buttonSignUp.Location = new System.Drawing.Point(115, 415);
             this.buttonSignUp.Name = "buttonSignUp";
             this.buttonSignUp.Size = new System.Drawing.Size(75, 23);
             this.buttonSignUp.TabIndex = 8;
-            this.buttonSignUp.Text = "kayıt ol";
+            this.buttonSignUp.Text = "Kayıt Ol";
             this.buttonSignUp.UseVisualStyleBackColor = true;
             this.buttonSignUp.Click += new System.EventHandler(this.buttonSignUp_Click);
             // 
@@ -137,12 +140,13 @@
             // checkBoxShowPassword
             // 
             this.checkBoxShowPassword.AutoSize = true;
-            this.checkBoxShowPassword.Location = new System.Drawing.Point(440, 180);
+            this.checkBoxShowPassword.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.checkBoxShowPassword.Location = new System.Drawing.Point(440, 181);
             this.checkBoxShowPassword.Name = "checkBoxShowPassword";
-            this.checkBoxShowPassword.Size = new System.Drawing.Size(55, 17);
+            this.checkBoxShowPassword.Size = new System.Drawing.Size(57, 17);
             this.checkBoxShowPassword.TabIndex = 10;
-            this.checkBoxShowPassword.Text = "göster";
-            this.checkBoxShowPassword.UseVisualStyleBackColor = true;
+            this.checkBoxShowPassword.Text = "Göster";
+            this.checkBoxShowPassword.UseVisualStyleBackColor = false;
             this.checkBoxShowPassword.CheckedChanged += new System.EventHandler(this.checkBoxShowPassword_CheckedChanged);
             // 
             // Form1

@@ -46,5 +46,10 @@ namespace RestaurantSystem
                 MessageBox.Show("Girmiş olduğunuz bilgiler yanlış, lütfen tekrar deneyiniz...");
             }
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
