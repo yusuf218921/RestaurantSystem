@@ -19,11 +19,11 @@ namespace RestaurantSystem
         {
             InitializeComponent();
             this.user = user;
-            profile_username.Text = "Kullanıcı Adı: " +"";
-            profile_name.Text = "İsim: " + "";
-            profile_email.Text = "E posta: " + "";
-            profile_surname.Text = "Soyisim: " + "";
-            profile_tel.Text = "Telefon: " + "";
+            profile_username.Text = "Kullanıcı Adı: " + user.Username;
+            profile_name.Text = "İsim: " + user.Name;
+            profile_email.Text = "E posta: " + user.Email;
+            profile_surname.Text = "Soyisim: " + user.Surname;
+            profile_tel.Text = "Telefon: " + user.Tel;
             changeCurrentMainButton(button_makeAppointment);
             
         }

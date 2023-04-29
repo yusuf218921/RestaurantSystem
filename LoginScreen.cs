@@ -29,8 +29,9 @@ namespace RestaurantSystem
             SqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-                if (reader["username"].ToString() == textbox_username.Text 
-                    && reader["password"].ToString() == textbox_username.Text) 
+
+                if (reader["username"].ToString().Equals(textbox_username.Text)
+                    && reader["password"].ToString().Equals(textbox_password.Text)) 
                 {
                     string username = reader["username"].ToString();
                     string password = reader["password"].ToString();
@@ -39,13 +40,13 @@ namespace RestaurantSystem
                     string email = reader["email"].ToString();
                     string tel = reader["phoneNumber"].ToString();
                     int user_id = (int)reader["id"];
-
                     user = new User(user_id,username,password,firstname,lastname,email,tel);
                     login = true;
                     break;
                 }
                 
             }
+            
             connection.Close();
             if (login)
             {
