@@ -49,7 +49,7 @@ namespace RestaurantSystem
         //
         private void button_makeAppointment_Click(object sender, EventArgs e)
         {
-            pageController.SelectedTab = page_makeReservation;
+            pageController.SelectedTab = page_getRes;
             changeCurrentMainButton(button_makeAppointment);
         }
         private void button_showAppointments_Click(object sender, EventArgs e)
@@ -78,12 +78,20 @@ namespace RestaurantSystem
         
         private void listReservations()
         {
-            show_reservations.Text = "";
+            page_showReservations_text.Text = "";
             //loginCol kullanılarak satırdaki kişiden reservasyonlar çekilecek
+            int i = 0;
             foreach (Reservation reservation in user.Reservations)
             {
-                show_reservations.Text += "\n" + reservation.Restourant + " - " + reservation.Date.Substring(0, 10) + " - "
+                if (i == 0) {
+                    page_showReservations_text.Text +=  reservation.Restourant + " - " + reservation.Date.Substring(0, 10) + " - "
                     + reservation.Hour.Substring(0, 5);
+                }
+                else
+                {
+                    page_showReservations_text.Text += "\n" + reservation.Restourant + " - " + reservation.Date.Substring(0, 10) + " - "
+                    + reservation.Hour.Substring(0, 5);
+                }
             }
         }
         //
@@ -124,14 +132,14 @@ namespace RestaurantSystem
         //
         private void button_yusufSelectClick(object sender, EventArgs e)
         {
-            pageController.SelectedTab = page_makeReservation_Detail;
-            page_makeApp_detail_title.Text = "Köfteci Yusuf";
+            pageController.SelectedTab = page_getRes_Detail;
+            page_getRes_detail_title.Text = "Köfteci Yusuf";
         }
 
         private void button_burgerSelectClick(object sender, EventArgs e)
         {
-            pageController.SelectedTab = page_makeReservation_Detail;
-            page_makeApp_detail_title.Text = "Burger King";
+            pageController.SelectedTab = page_getRes_Detail;
+            page_getRes_detail_title.Text = "Burger King";
         }
         //
         //Profil görüntüle sayfası buttonları
@@ -206,14 +214,14 @@ namespace RestaurantSystem
         //
         private void page_makeApp_detail_return_Click(object sender, EventArgs e)
         {
-            pageController.SelectedTab = page_makeReservation;
+            pageController.SelectedTab = page_getRes;
         }
 
         private void page_makeApp_detail_confirm_Click(object sender, EventArgs e)
         {
-            DateTime datetime = page_makeApp_detail_datePicker.Value;
+            DateTime datetime = page_getRes_detail_datePicker.Value;
             String date = datetime.ToString("yyyy-MM-dd");
-            DateTime time = page_makeApp_detail_timePicker.Value;
+            DateTime time = page_getRes_detail_timePicker.Value;
             String _time = time.ToString("HH:mm:ss");
             DBHelper dBHelper = new DBHelper();
             SqlConnection connection = dBHelper.SqlConnection;
@@ -223,12 +231,12 @@ namespace RestaurantSystem
 
             command.Parameters.AddWithValue("@reservation_date", date);
             command.Parameters.AddWithValue("@reservation_time", _time);
-            command.Parameters.AddWithValue("@restaurant_name", page_makeApp_detail_title.Text);
+            command.Parameters.AddWithValue("@restaurant_name", page_getRes_detail_title.Text);
             command.Parameters.AddWithValue("@customer_id", user.Id);
             int rowsAffected = command.ExecuteNonQuery();
             connection.Close();
 
-            Reservation reservation = new Reservation(page_makeApp_detail_title.Text,date,_time,user.Username);
+            Reservation reservation = new Reservation(page_getRes_detail_title.Text,date,_time,user.Username);
             user.Reservations.Add(reservation);
             MessageBox.Show("Randevu başarıyla alındı");
         }

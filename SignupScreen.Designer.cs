@@ -330,7 +330,7 @@
             // 
             // textBox_District
             // 
-            this.textBox_District.Location = new System.Drawing.Point(518, 169);
+            this.textBox_District.Location = new System.Drawing.Point(518, 166);
             this.textBox_District.Name = "textBox_District";
             this.textBox_District.Size = new System.Drawing.Size(250, 20);
             this.textBox_District.TabIndex = 28;

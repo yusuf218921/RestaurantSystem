@@ -36,21 +36,21 @@ namespace RestaurantSystem
             this.button_logout = new System.Windows.Forms.Button();
             this.button_showAppointments = new System.Windows.Forms.Button();
             this.pageController = new System.Windows.Forms.TabControl();
-            this.page_makeReservation = new System.Windows.Forms.TabPage();
+            this.page_getRes = new System.Windows.Forms.TabPage();
             this.button_burgerSelect = new System.Windows.Forms.Button();
             this.button_yusufSelect = new System.Windows.Forms.Button();
-            this.page_makeReservation_Detail = new System.Windows.Forms.TabPage();
-            this.page_makeApp_detail_return = new System.Windows.Forms.Button();
-            this.page_makeApp_detail_confirm = new System.Windows.Forms.Button();
-            this.page_makeApp_detail_label2 = new System.Windows.Forms.Label();
-            this.page_makeApp_detail_label1 = new System.Windows.Forms.Label();
-            this.page_makeApp_detail_datePicker = new System.Windows.Forms.DateTimePicker();
-            this.page_makeApp_detail_timePicker = new System.Windows.Forms.DateTimePicker();
-            this.page_makeApp_detail_title = new System.Windows.Forms.Label();
-            this.page_makeApp_detail_text = new System.Windows.Forms.Label();
+            this.page_getRes_Detail = new System.Windows.Forms.TabPage();
+            this.page_getRes_detail_return = new System.Windows.Forms.Button();
+            this.page_getRes_detail_confirm = new System.Windows.Forms.Button();
+            this.page_getRes_detail_label2 = new System.Windows.Forms.Label();
+            this.page_getRes_detail_label1 = new System.Windows.Forms.Label();
+            this.page_getRes_detail_datePicker = new System.Windows.Forms.DateTimePicker();
+            this.page_getRes_detail_timePicker = new System.Windows.Forms.DateTimePicker();
+            this.page_getRes_detail_title = new System.Windows.Forms.Label();
+            this.page_getRes_detail_text = new System.Windows.Forms.Label();
             this.page_showReservations = new System.Windows.Forms.TabPage();
-            this.show_reservations = new System.Windows.Forms.Label();
-            this.show_reservations_text = new System.Windows.Forms.Label();
+            this.page_showReservations_text = new System.Windows.Forms.Label();
+            this.page_showReservations_label = new System.Windows.Forms.Label();
             this.page_profile = new System.Windows.Forms.TabPage();
             this.profile_message = new System.Windows.Forms.Label();
             this.profile_textbox_name = new System.Windows.Forms.TextBox();
@@ -65,8 +65,8 @@ namespace RestaurantSystem
             this.profile_email = new System.Windows.Forms.Label();
             this.profile_username = new System.Windows.Forms.Label();
             this.pageController.SuspendLayout();
-            this.page_makeReservation.SuspendLayout();
-            this.page_makeReservation_Detail.SuspendLayout();
+            this.page_getRes.SuspendLayout();
+            this.page_getRes_Detail.SuspendLayout();
             this.page_showReservations.SuspendLayout();
             this.page_profile.SuspendLayout();
             this.SuspendLayout();
@@ -145,8 +145,8 @@ namespace RestaurantSystem
             // 
             // pageController
             // 
-            this.pageController.Controls.Add(this.page_makeReservation);
-            this.pageController.Controls.Add(this.page_makeReservation_Detail);
+            this.pageController.Controls.Add(this.page_getRes);
+            this.pageController.Controls.Add(this.page_getRes_Detail);
             this.pageController.Controls.Add(this.page_showReservations);
             this.pageController.Controls.Add(this.page_profile);
             this.pageController.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -156,16 +156,16 @@ namespace RestaurantSystem
             this.pageController.Size = new System.Drawing.Size(813, 491);
             this.pageController.TabIndex = 5;
             // 
-            // page_makeReservation
+            // page_getRes
             // 
-            this.page_makeReservation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.page_makeReservation.Controls.Add(this.button_burgerSelect);
-            this.page_makeReservation.Controls.Add(this.button_yusufSelect);
-            this.page_makeReservation.ForeColor = System.Drawing.Color.White;
-            this.page_makeReservation.Location = new System.Drawing.Point(4, 30);
-            this.page_makeReservation.Name = "page_makeReservation";
-            this.page_makeReservation.Size = new System.Drawing.Size(805, 457);
-            this.page_makeReservation.TabIndex = 0;
+            this.page_getRes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.page_getRes.Controls.Add(this.button_burgerSelect);
+            this.page_getRes.Controls.Add(this.button_yusufSelect);
+            this.page_getRes.ForeColor = System.Drawing.Color.White;
+            this.page_getRes.Location = new System.Drawing.Point(4, 30);
+            this.page_getRes.Name = "page_getRes";
+            this.page_getRes.Size = new System.Drawing.Size(805, 457);
+            this.page_getRes.TabIndex = 0;
             // 
             // button_burgerSelect
             // 
@@ -197,142 +197,142 @@ namespace RestaurantSystem
             this.button_yusufSelect.UseVisualStyleBackColor = true;
             this.button_yusufSelect.Click += new System.EventHandler(this.button_yusufSelectClick);
             // 
-            // page_makeReservation_Detail
+            // page_getRes_Detail
             // 
-            this.page_makeReservation_Detail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.page_makeReservation_Detail.Controls.Add(this.page_makeApp_detail_return);
-            this.page_makeReservation_Detail.Controls.Add(this.page_makeApp_detail_confirm);
-            this.page_makeReservation_Detail.Controls.Add(this.page_makeApp_detail_label2);
-            this.page_makeReservation_Detail.Controls.Add(this.page_makeApp_detail_label1);
-            this.page_makeReservation_Detail.Controls.Add(this.page_makeApp_detail_datePicker);
-            this.page_makeReservation_Detail.Controls.Add(this.page_makeApp_detail_timePicker);
-            this.page_makeReservation_Detail.Controls.Add(this.page_makeApp_detail_title);
-            this.page_makeReservation_Detail.Controls.Add(this.page_makeApp_detail_text);
-            this.page_makeReservation_Detail.ForeColor = System.Drawing.Color.White;
-            this.page_makeReservation_Detail.Location = new System.Drawing.Point(4, 30);
-            this.page_makeReservation_Detail.Name = "page_makeReservation_Detail";
-            this.page_makeReservation_Detail.Size = new System.Drawing.Size(805, 457);
-            this.page_makeReservation_Detail.TabIndex = 2;
+            this.page_getRes_Detail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.page_getRes_Detail.Controls.Add(this.page_getRes_detail_return);
+            this.page_getRes_Detail.Controls.Add(this.page_getRes_detail_confirm);
+            this.page_getRes_Detail.Controls.Add(this.page_getRes_detail_label2);
+            this.page_getRes_Detail.Controls.Add(this.page_getRes_detail_label1);
+            this.page_getRes_Detail.Controls.Add(this.page_getRes_detail_datePicker);
+            this.page_getRes_Detail.Controls.Add(this.page_getRes_detail_timePicker);
+            this.page_getRes_Detail.Controls.Add(this.page_getRes_detail_title);
+            this.page_getRes_Detail.Controls.Add(this.page_getRes_detail_text);
+            this.page_getRes_Detail.ForeColor = System.Drawing.Color.White;
+            this.page_getRes_Detail.Location = new System.Drawing.Point(4, 30);
+            this.page_getRes_Detail.Name = "page_getRes_Detail";
+            this.page_getRes_Detail.Size = new System.Drawing.Size(805, 457);
+            this.page_getRes_Detail.TabIndex = 2;
             // 
-            // page_makeApp_detail_return
+            // page_getRes_detail_return
             // 
-            this.page_makeApp_detail_return.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.page_makeApp_detail_return.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.page_makeApp_detail_return.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.page_makeApp_detail_return.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.page_makeApp_detail_return.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.page_makeApp_detail_return.ForeColor = System.Drawing.Color.Red;
-            this.page_makeApp_detail_return.Location = new System.Drawing.Point(293, 213);
-            this.page_makeApp_detail_return.Name = "page_makeApp_detail_return";
-            this.page_makeApp_detail_return.Size = new System.Drawing.Size(74, 40);
-            this.page_makeApp_detail_return.TabIndex = 21;
-            this.page_makeApp_detail_return.Text = "Geri Dön";
-            this.page_makeApp_detail_return.UseVisualStyleBackColor = true;
-            this.page_makeApp_detail_return.Click += new System.EventHandler(this.page_makeApp_detail_return_Click);
+            this.page_getRes_detail_return.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.page_getRes_detail_return.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.page_getRes_detail_return.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.page_getRes_detail_return.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.page_getRes_detail_return.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.page_getRes_detail_return.ForeColor = System.Drawing.Color.Red;
+            this.page_getRes_detail_return.Location = new System.Drawing.Point(293, 213);
+            this.page_getRes_detail_return.Name = "page_getRes_detail_return";
+            this.page_getRes_detail_return.Size = new System.Drawing.Size(74, 40);
+            this.page_getRes_detail_return.TabIndex = 21;
+            this.page_getRes_detail_return.Text = "Geri Dön";
+            this.page_getRes_detail_return.UseVisualStyleBackColor = true;
+            this.page_getRes_detail_return.Click += new System.EventHandler(this.page_makeApp_detail_return_Click);
             // 
-            // page_makeApp_detail_confirm
+            // page_getRes_detail_confirm
             // 
-            this.page_makeApp_detail_confirm.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(100)))));
-            this.page_makeApp_detail_confirm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(100)))), ((int)(((byte)(40)))));
-            this.page_makeApp_detail_confirm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(100)))), ((int)(((byte)(40)))));
-            this.page_makeApp_detail_confirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.page_makeApp_detail_confirm.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.page_makeApp_detail_confirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(100)))));
-            this.page_makeApp_detail_confirm.Location = new System.Drawing.Point(570, 213);
-            this.page_makeApp_detail_confirm.Name = "page_makeApp_detail_confirm";
-            this.page_makeApp_detail_confirm.Size = new System.Drawing.Size(74, 40);
-            this.page_makeApp_detail_confirm.TabIndex = 20;
-            this.page_makeApp_detail_confirm.Text = "Randevu Al";
-            this.page_makeApp_detail_confirm.UseVisualStyleBackColor = true;
-            this.page_makeApp_detail_confirm.Click += new System.EventHandler(this.page_makeApp_detail_confirm_Click);
+            this.page_getRes_detail_confirm.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(100)))));
+            this.page_getRes_detail_confirm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(100)))), ((int)(((byte)(40)))));
+            this.page_getRes_detail_confirm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(100)))), ((int)(((byte)(40)))));
+            this.page_getRes_detail_confirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.page_getRes_detail_confirm.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.page_getRes_detail_confirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(100)))));
+            this.page_getRes_detail_confirm.Location = new System.Drawing.Point(570, 213);
+            this.page_getRes_detail_confirm.Name = "page_getRes_detail_confirm";
+            this.page_getRes_detail_confirm.Size = new System.Drawing.Size(74, 40);
+            this.page_getRes_detail_confirm.TabIndex = 20;
+            this.page_getRes_detail_confirm.Text = "Randevu Al";
+            this.page_getRes_detail_confirm.UseVisualStyleBackColor = true;
+            this.page_getRes_detail_confirm.Click += new System.EventHandler(this.page_makeApp_detail_confirm_Click);
             // 
-            // page_makeApp_detail_label2
+            // page_getRes_detail_label2
             // 
-            this.page_makeApp_detail_label2.AutoSize = true;
-            this.page_makeApp_detail_label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.page_makeApp_detail_label2.Location = new System.Drawing.Point(510, 165);
-            this.page_makeApp_detail_label2.Name = "page_makeApp_detail_label2";
-            this.page_makeApp_detail_label2.Size = new System.Drawing.Size(55, 25);
-            this.page_makeApp_detail_label2.TabIndex = 5;
-            this.page_makeApp_detail_label2.Text = "Saat:";
+            this.page_getRes_detail_label2.AutoSize = true;
+            this.page_getRes_detail_label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.page_getRes_detail_label2.Location = new System.Drawing.Point(510, 165);
+            this.page_getRes_detail_label2.Name = "page_getRes_detail_label2";
+            this.page_getRes_detail_label2.Size = new System.Drawing.Size(55, 25);
+            this.page_getRes_detail_label2.TabIndex = 5;
+            this.page_getRes_detail_label2.Text = "Saat:";
             // 
-            // page_makeApp_detail_label1
+            // page_getRes_detail_label1
             // 
-            this.page_makeApp_detail_label1.AutoSize = true;
-            this.page_makeApp_detail_label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.page_makeApp_detail_label1.Location = new System.Drawing.Point(302, 165);
-            this.page_makeApp_detail_label1.Name = "page_makeApp_detail_label1";
-            this.page_makeApp_detail_label1.Size = new System.Drawing.Size(65, 25);
-            this.page_makeApp_detail_label1.TabIndex = 4;
-            this.page_makeApp_detail_label1.Text = "Tarih: ";
+            this.page_getRes_detail_label1.AutoSize = true;
+            this.page_getRes_detail_label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.page_getRes_detail_label1.Location = new System.Drawing.Point(302, 165);
+            this.page_getRes_detail_label1.Name = "page_getRes_detail_label1";
+            this.page_getRes_detail_label1.Size = new System.Drawing.Size(65, 25);
+            this.page_getRes_detail_label1.TabIndex = 4;
+            this.page_getRes_detail_label1.Text = "Tarih: ";
             // 
-            // page_makeApp_detail_datePicker
+            // page_getRes_detail_datePicker
             // 
-            this.page_makeApp_detail_datePicker.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.page_makeApp_detail_datePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.page_makeApp_detail_datePicker.Location = new System.Drawing.Point(373, 162);
-            this.page_makeApp_detail_datePicker.Name = "page_makeApp_detail_datePicker";
-            this.page_makeApp_detail_datePicker.ShowUpDown = true;
-            this.page_makeApp_detail_datePicker.Size = new System.Drawing.Size(128, 32);
-            this.page_makeApp_detail_datePicker.TabIndex = 3;
+            this.page_getRes_detail_datePicker.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.page_getRes_detail_datePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.page_getRes_detail_datePicker.Location = new System.Drawing.Point(373, 162);
+            this.page_getRes_detail_datePicker.Name = "page_getRes_detail_datePicker";
+            this.page_getRes_detail_datePicker.ShowUpDown = true;
+            this.page_getRes_detail_datePicker.Size = new System.Drawing.Size(128, 32);
+            this.page_getRes_detail_datePicker.TabIndex = 3;
             // 
-            // page_makeApp_detail_timePicker
+            // page_getRes_detail_timePicker
             // 
-            this.page_makeApp_detail_timePicker.CustomFormat = "HH:mm";
-            this.page_makeApp_detail_timePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.page_makeApp_detail_timePicker.Location = new System.Drawing.Point(570, 165);
-            this.page_makeApp_detail_timePicker.Name = "page_makeApp_detail_timePicker";
-            this.page_makeApp_detail_timePicker.ShowUpDown = true;
-            this.page_makeApp_detail_timePicker.Size = new System.Drawing.Size(74, 29);
-            this.page_makeApp_detail_timePicker.TabIndex = 2;
+            this.page_getRes_detail_timePicker.CustomFormat = "HH:mm";
+            this.page_getRes_detail_timePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.page_getRes_detail_timePicker.Location = new System.Drawing.Point(570, 165);
+            this.page_getRes_detail_timePicker.Name = "page_getRes_detail_timePicker";
+            this.page_getRes_detail_timePicker.ShowUpDown = true;
+            this.page_getRes_detail_timePicker.Size = new System.Drawing.Size(74, 29);
+            this.page_getRes_detail_timePicker.TabIndex = 2;
             // 
-            // page_makeApp_detail_title
+            // page_getRes_detail_title
             // 
-            this.page_makeApp_detail_title.AutoSize = true;
-            this.page_makeApp_detail_title.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
-            this.page_makeApp_detail_title.Location = new System.Drawing.Point(225, 35);
-            this.page_makeApp_detail_title.Name = "page_makeApp_detail_title";
-            this.page_makeApp_detail_title.Size = new System.Drawing.Size(204, 41);
-            this.page_makeApp_detail_title.TabIndex = 1;
-            this.page_makeApp_detail_title.Text = "Köfteci Yusuf";
+            this.page_getRes_detail_title.AutoSize = true;
+            this.page_getRes_detail_title.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
+            this.page_getRes_detail_title.Location = new System.Drawing.Point(225, 35);
+            this.page_getRes_detail_title.Name = "page_getRes_detail_title";
+            this.page_getRes_detail_title.Size = new System.Drawing.Size(204, 41);
+            this.page_getRes_detail_title.TabIndex = 1;
+            this.page_getRes_detail_title.Text = "Köfteci Yusuf";
             // 
-            // page_makeApp_detail_text
+            // page_getRes_detail_text
             // 
-            this.page_makeApp_detail_text.AutoSize = true;
-            this.page_makeApp_detail_text.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.page_makeApp_detail_text.Location = new System.Drawing.Point(228, 111);
-            this.page_makeApp_detail_text.Name = "page_makeApp_detail_text";
-            this.page_makeApp_detail_text.Size = new System.Drawing.Size(416, 25);
-            this.page_makeApp_detail_text.TabIndex = 0;
-            this.page_makeApp_detail_text.Text = "Lütfen randevu almak istediğiniz tarihi seçiniz";
+            this.page_getRes_detail_text.AutoSize = true;
+            this.page_getRes_detail_text.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.page_getRes_detail_text.Location = new System.Drawing.Point(228, 111);
+            this.page_getRes_detail_text.Name = "page_getRes_detail_text";
+            this.page_getRes_detail_text.Size = new System.Drawing.Size(416, 25);
+            this.page_getRes_detail_text.TabIndex = 0;
+            this.page_getRes_detail_text.Text = "Lütfen randevu almak istediğiniz tarihi seçiniz";
             // 
             // page_showReservations
             // 
             this.page_showReservations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.page_showReservations.Controls.Add(this.show_reservations);
-            this.page_showReservations.Controls.Add(this.show_reservations_text);
+            this.page_showReservations.Controls.Add(this.page_showReservations_text);
+            this.page_showReservations.Controls.Add(this.page_showReservations_label);
             this.page_showReservations.ForeColor = System.Drawing.Color.White;
             this.page_showReservations.Location = new System.Drawing.Point(4, 30);
             this.page_showReservations.Name = "page_showReservations";
             this.page_showReservations.Size = new System.Drawing.Size(805, 457);
             this.page_showReservations.TabIndex = 1;
             // 
-            // show_reservations
+            // page_showReservations_text
             // 
-            this.show_reservations.AutoSize = true;
-            this.show_reservations.Location = new System.Drawing.Point(423, 82);
-            this.show_reservations.Name = "show_reservations";
-            this.show_reservations.Size = new System.Drawing.Size(0, 21);
-            this.show_reservations.TabIndex = 1;
+            this.page_showReservations_text.AutoSize = true;
+            this.page_showReservations_text.Location = new System.Drawing.Point(423, 82);
+            this.page_showReservations_text.Name = "page_showReservations_text";
+            this.page_showReservations_text.Size = new System.Drawing.Size(0, 21);
+            this.page_showReservations_text.TabIndex = 1;
             // 
-            // show_reservations_text
+            // page_showReservations_label
             // 
-            this.show_reservations_text.AutoSize = true;
-            this.show_reservations_text.Location = new System.Drawing.Point(235, 82);
-            this.show_reservations_text.Name = "show_reservations_text";
-            this.show_reservations_text.Size = new System.Drawing.Size(163, 21);
-            this.show_reservations_text.TabIndex = 0;
-            this.show_reservations_text.Text = "Rezervasyonlarınız: ";
+            this.page_showReservations_label.AutoSize = true;
+            this.page_showReservations_label.Location = new System.Drawing.Point(235, 82);
+            this.page_showReservations_label.Name = "page_showReservations_label";
+            this.page_showReservations_label.Size = new System.Drawing.Size(163, 21);
+            this.page_showReservations_label.TabIndex = 0;
+            this.page_showReservations_label.Text = "Rezervasyonlarınız: ";
             // 
             // page_profile
             // 
@@ -507,9 +507,9 @@ namespace RestaurantSystem
             this.Name = "MainScreen";
             this.Text = "Rezervasyon Yap";
             this.pageController.ResumeLayout(false);
-            this.page_makeReservation.ResumeLayout(false);
-            this.page_makeReservation_Detail.ResumeLayout(false);
-            this.page_makeReservation_Detail.PerformLayout();
+            this.page_getRes.ResumeLayout(false);
+            this.page_getRes_Detail.ResumeLayout(false);
+            this.page_getRes_Detail.PerformLayout();
             this.page_showReservations.ResumeLayout(false);
             this.page_showReservations.PerformLayout();
             this.page_profile.ResumeLayout(false);
@@ -524,12 +524,12 @@ namespace RestaurantSystem
         public System.Windows.Forms.Button button_makeAppointment;
         public System.Windows.Forms.Button button_profile;
         private System.Windows.Forms.TabControl pageController;
-        private System.Windows.Forms.TabPage page_makeReservation;
+        private System.Windows.Forms.TabPage page_getRes;
         private System.Windows.Forms.TabPage page_showReservations;
         private System.Windows.Forms.Button button_yusufSelect;
         private System.Windows.Forms.Button button_burgerSelect;
-        private System.Windows.Forms.TabPage page_makeReservation_Detail;
-        private System.Windows.Forms.Label page_makeApp_detail_text;
+        private System.Windows.Forms.TabPage page_getRes_Detail;
+        private System.Windows.Forms.Label page_getRes_detail_text;
         private System.Windows.Forms.TabPage page_profile;
         private System.Windows.Forms.Label profile_surname;
         private System.Windows.Forms.Label profile_name;
@@ -543,14 +543,14 @@ namespace RestaurantSystem
         private System.Windows.Forms.TextBox profile_textbox_surname;
         private System.Windows.Forms.TextBox profile_textbox_name;
         private System.Windows.Forms.Label profile_message;
-        private System.Windows.Forms.Label page_makeApp_detail_title;
-        private System.Windows.Forms.DateTimePicker page_makeApp_detail_timePicker;
-        private DateTimePicker page_makeApp_detail_datePicker;
-        private Label page_makeApp_detail_label1;
-        private Label page_makeApp_detail_label2;
-        private Button page_makeApp_detail_confirm;
-        private Button page_makeApp_detail_return;
-        private Label show_reservations;
-        private Label show_reservations_text;
+        private System.Windows.Forms.Label page_getRes_detail_title;
+        private System.Windows.Forms.DateTimePicker page_getRes_detail_timePicker;
+        private DateTimePicker page_getRes_detail_datePicker;
+        private Label page_getRes_detail_label1;
+        private Label page_getRes_detail_label2;
+        private Button page_getRes_detail_confirm;
+        private Button page_getRes_detail_return;
+        private Label page_showReservations_text;
+        private Label page_showReservations_label;
     }
 }
