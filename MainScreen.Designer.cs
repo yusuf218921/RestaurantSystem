@@ -36,10 +36,10 @@ namespace RestaurantSystem
             this.button_logout = new System.Windows.Forms.Button();
             this.button_showAppointments = new System.Windows.Forms.Button();
             this.pageController = new System.Windows.Forms.TabControl();
-            this.page_makeApp = new System.Windows.Forms.TabPage();
+            this.page_makeReservation = new System.Windows.Forms.TabPage();
             this.button_burgerSelect = new System.Windows.Forms.Button();
             this.button_yusufSelect = new System.Windows.Forms.Button();
-            this.page_makeApp_Detail = new System.Windows.Forms.TabPage();
+            this.page_makeReservation_Detail = new System.Windows.Forms.TabPage();
             this.page_makeApp_detail_return = new System.Windows.Forms.Button();
             this.page_makeApp_detail_confirm = new System.Windows.Forms.Button();
             this.page_makeApp_detail_label2 = new System.Windows.Forms.Label();
@@ -48,7 +48,9 @@ namespace RestaurantSystem
             this.page_makeApp_detail_timePicker = new System.Windows.Forms.DateTimePicker();
             this.page_makeApp_detail_title = new System.Windows.Forms.Label();
             this.page_makeApp_detail_text = new System.Windows.Forms.Label();
-            this.page_showApp = new System.Windows.Forms.TabPage();
+            this.page_showReservations = new System.Windows.Forms.TabPage();
+            this.show_reservations = new System.Windows.Forms.Label();
+            this.show_reservations_text = new System.Windows.Forms.Label();
             this.page_profile = new System.Windows.Forms.TabPage();
             this.profile_message = new System.Windows.Forms.Label();
             this.profile_textbox_name = new System.Windows.Forms.TextBox();
@@ -63,8 +65,9 @@ namespace RestaurantSystem
             this.profile_email = new System.Windows.Forms.Label();
             this.profile_username = new System.Windows.Forms.Label();
             this.pageController.SuspendLayout();
-            this.page_makeApp.SuspendLayout();
-            this.page_makeApp_Detail.SuspendLayout();
+            this.page_makeReservation.SuspendLayout();
+            this.page_makeReservation_Detail.SuspendLayout();
+            this.page_showReservations.SuspendLayout();
             this.page_profile.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,7 +83,7 @@ namespace RestaurantSystem
             this.button_profile.Location = new System.Drawing.Point(-1, 157);
             this.button_profile.Margin = new System.Windows.Forms.Padding(0);
             this.button_profile.Name = "button_profile";
-            this.button_profile.Size = new System.Drawing.Size(100, 80);
+            this.button_profile.Size = new System.Drawing.Size(127, 80);
             this.button_profile.TabIndex = 4;
             this.button_profile.Text = "Profili Görüntüle";
             this.button_profile.UseVisualStyleBackColor = false;
@@ -98,9 +101,9 @@ namespace RestaurantSystem
             this.button_makeAppointment.Location = new System.Drawing.Point(-1, -3);
             this.button_makeAppointment.Margin = new System.Windows.Forms.Padding(0);
             this.button_makeAppointment.Name = "button_makeAppointment";
-            this.button_makeAppointment.Size = new System.Drawing.Size(100, 80);
+            this.button_makeAppointment.Size = new System.Drawing.Size(127, 80);
             this.button_makeAppointment.TabIndex = 3;
-            this.button_makeAppointment.Text = "Randevu Al";
+            this.button_makeAppointment.Text = "Rezervasyon Yap";
             this.button_makeAppointment.UseVisualStyleBackColor = false;
             this.button_makeAppointment.Click += new System.EventHandler(this.button_makeAppointment_Click);
             // 
@@ -116,7 +119,7 @@ namespace RestaurantSystem
             this.button_logout.Location = new System.Drawing.Point(0, 237);
             this.button_logout.Margin = new System.Windows.Forms.Padding(0);
             this.button_logout.Name = "button_logout";
-            this.button_logout.Size = new System.Drawing.Size(100, 80);
+            this.button_logout.Size = new System.Drawing.Size(127, 80);
             this.button_logout.TabIndex = 2;
             this.button_logout.Text = "Çıkış Yap";
             this.button_logout.UseVisualStyleBackColor = false;
@@ -134,17 +137,17 @@ namespace RestaurantSystem
             this.button_showAppointments.Location = new System.Drawing.Point(-1, 77);
             this.button_showAppointments.Margin = new System.Windows.Forms.Padding(0);
             this.button_showAppointments.Name = "button_showAppointments";
-            this.button_showAppointments.Size = new System.Drawing.Size(100, 80);
+            this.button_showAppointments.Size = new System.Drawing.Size(127, 80);
             this.button_showAppointments.TabIndex = 1;
-            this.button_showAppointments.Text = "Randevuları Görüntüle";
+            this.button_showAppointments.Text = "Rezervasyonları Görüntüle";
             this.button_showAppointments.UseVisualStyleBackColor = false;
             this.button_showAppointments.Click += new System.EventHandler(this.button_showAppointments_Click);
             // 
             // pageController
             // 
-            this.pageController.Controls.Add(this.page_makeApp);
-            this.pageController.Controls.Add(this.page_makeApp_Detail);
-            this.pageController.Controls.Add(this.page_showApp);
+            this.pageController.Controls.Add(this.page_makeReservation);
+            this.pageController.Controls.Add(this.page_makeReservation_Detail);
+            this.pageController.Controls.Add(this.page_showReservations);
             this.pageController.Controls.Add(this.page_profile);
             this.pageController.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pageController.Location = new System.Drawing.Point(-8, -35);
@@ -153,16 +156,16 @@ namespace RestaurantSystem
             this.pageController.Size = new System.Drawing.Size(813, 491);
             this.pageController.TabIndex = 5;
             // 
-            // page_makeApp
+            // page_makeReservation
             // 
-            this.page_makeApp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.page_makeApp.Controls.Add(this.button_burgerSelect);
-            this.page_makeApp.Controls.Add(this.button_yusufSelect);
-            this.page_makeApp.ForeColor = System.Drawing.Color.White;
-            this.page_makeApp.Location = new System.Drawing.Point(4, 30);
-            this.page_makeApp.Name = "page_makeApp";
-            this.page_makeApp.Size = new System.Drawing.Size(805, 457);
-            this.page_makeApp.TabIndex = 0;
+            this.page_makeReservation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.page_makeReservation.Controls.Add(this.button_burgerSelect);
+            this.page_makeReservation.Controls.Add(this.button_yusufSelect);
+            this.page_makeReservation.ForeColor = System.Drawing.Color.White;
+            this.page_makeReservation.Location = new System.Drawing.Point(4, 30);
+            this.page_makeReservation.Name = "page_makeReservation";
+            this.page_makeReservation.Size = new System.Drawing.Size(805, 457);
+            this.page_makeReservation.TabIndex = 0;
             // 
             // button_burgerSelect
             // 
@@ -172,7 +175,7 @@ namespace RestaurantSystem
             this.button_burgerSelect.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.button_burgerSelect.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.button_burgerSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_burgerSelect.Location = new System.Drawing.Point(425, 85);
+            this.button_burgerSelect.Location = new System.Drawing.Point(443, 85);
             this.button_burgerSelect.Name = "button_burgerSelect";
             this.button_burgerSelect.Size = new System.Drawing.Size(233, 233);
             this.button_burgerSelect.TabIndex = 1;
@@ -187,29 +190,29 @@ namespace RestaurantSystem
             this.button_yusufSelect.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.button_yusufSelect.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.button_yusufSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_yusufSelect.Location = new System.Drawing.Point(166, 85);
+            this.button_yusufSelect.Location = new System.Drawing.Point(184, 85);
             this.button_yusufSelect.Name = "button_yusufSelect";
             this.button_yusufSelect.Size = new System.Drawing.Size(233, 233);
             this.button_yusufSelect.TabIndex = 0;
             this.button_yusufSelect.UseVisualStyleBackColor = true;
             this.button_yusufSelect.Click += new System.EventHandler(this.button_yusufSelectClick);
             // 
-            // page_makeApp_Detail
+            // page_makeReservation_Detail
             // 
-            this.page_makeApp_Detail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.page_makeApp_Detail.Controls.Add(this.page_makeApp_detail_return);
-            this.page_makeApp_Detail.Controls.Add(this.page_makeApp_detail_confirm);
-            this.page_makeApp_Detail.Controls.Add(this.page_makeApp_detail_label2);
-            this.page_makeApp_Detail.Controls.Add(this.page_makeApp_detail_label1);
-            this.page_makeApp_Detail.Controls.Add(this.page_makeApp_detail_datePicker);
-            this.page_makeApp_Detail.Controls.Add(this.page_makeApp_detail_timePicker);
-            this.page_makeApp_Detail.Controls.Add(this.page_makeApp_detail_title);
-            this.page_makeApp_Detail.Controls.Add(this.page_makeApp_detail_text);
-            this.page_makeApp_Detail.ForeColor = System.Drawing.Color.White;
-            this.page_makeApp_Detail.Location = new System.Drawing.Point(4, 30);
-            this.page_makeApp_Detail.Name = "page_makeApp_Detail";
-            this.page_makeApp_Detail.Size = new System.Drawing.Size(805, 457);
-            this.page_makeApp_Detail.TabIndex = 2;
+            this.page_makeReservation_Detail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.page_makeReservation_Detail.Controls.Add(this.page_makeApp_detail_return);
+            this.page_makeReservation_Detail.Controls.Add(this.page_makeApp_detail_confirm);
+            this.page_makeReservation_Detail.Controls.Add(this.page_makeApp_detail_label2);
+            this.page_makeReservation_Detail.Controls.Add(this.page_makeApp_detail_label1);
+            this.page_makeReservation_Detail.Controls.Add(this.page_makeApp_detail_datePicker);
+            this.page_makeReservation_Detail.Controls.Add(this.page_makeApp_detail_timePicker);
+            this.page_makeReservation_Detail.Controls.Add(this.page_makeApp_detail_title);
+            this.page_makeReservation_Detail.Controls.Add(this.page_makeApp_detail_text);
+            this.page_makeReservation_Detail.ForeColor = System.Drawing.Color.White;
+            this.page_makeReservation_Detail.Location = new System.Drawing.Point(4, 30);
+            this.page_makeReservation_Detail.Name = "page_makeReservation_Detail";
+            this.page_makeReservation_Detail.Size = new System.Drawing.Size(805, 457);
+            this.page_makeReservation_Detail.TabIndex = 2;
             // 
             // page_makeApp_detail_return
             // 
@@ -303,14 +306,33 @@ namespace RestaurantSystem
             this.page_makeApp_detail_text.TabIndex = 0;
             this.page_makeApp_detail_text.Text = "Lütfen randevu almak istediğiniz tarihi seçiniz";
             // 
-            // page_showApp
+            // page_showReservations
             // 
-            this.page_showApp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.page_showApp.ForeColor = System.Drawing.Color.White;
-            this.page_showApp.Location = new System.Drawing.Point(4, 30);
-            this.page_showApp.Name = "page_showApp";
-            this.page_showApp.Size = new System.Drawing.Size(805, 457);
-            this.page_showApp.TabIndex = 1;
+            this.page_showReservations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.page_showReservations.Controls.Add(this.show_reservations);
+            this.page_showReservations.Controls.Add(this.show_reservations_text);
+            this.page_showReservations.ForeColor = System.Drawing.Color.White;
+            this.page_showReservations.Location = new System.Drawing.Point(4, 30);
+            this.page_showReservations.Name = "page_showReservations";
+            this.page_showReservations.Size = new System.Drawing.Size(805, 457);
+            this.page_showReservations.TabIndex = 1;
+            // 
+            // show_reservations
+            // 
+            this.show_reservations.AutoSize = true;
+            this.show_reservations.Location = new System.Drawing.Point(423, 82);
+            this.show_reservations.Name = "show_reservations";
+            this.show_reservations.Size = new System.Drawing.Size(0, 21);
+            this.show_reservations.TabIndex = 1;
+            // 
+            // show_reservations_text
+            // 
+            this.show_reservations_text.AutoSize = true;
+            this.show_reservations_text.Location = new System.Drawing.Point(235, 82);
+            this.show_reservations_text.Name = "show_reservations_text";
+            this.show_reservations_text.Size = new System.Drawing.Size(163, 21);
+            this.show_reservations_text.TabIndex = 0;
+            this.show_reservations_text.Text = "Rezervasyonlarınız: ";
             // 
             // page_profile
             // 
@@ -483,11 +505,13 @@ namespace RestaurantSystem
             this.Controls.Add(this.pageController);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainScreen";
-            this.Text = "Randevu";
+            this.Text = "Rezervasyon Yap";
             this.pageController.ResumeLayout(false);
-            this.page_makeApp.ResumeLayout(false);
-            this.page_makeApp_Detail.ResumeLayout(false);
-            this.page_makeApp_Detail.PerformLayout();
+            this.page_makeReservation.ResumeLayout(false);
+            this.page_makeReservation_Detail.ResumeLayout(false);
+            this.page_makeReservation_Detail.PerformLayout();
+            this.page_showReservations.ResumeLayout(false);
+            this.page_showReservations.PerformLayout();
             this.page_profile.ResumeLayout(false);
             this.page_profile.PerformLayout();
             this.ResumeLayout(false);
@@ -500,11 +524,11 @@ namespace RestaurantSystem
         public System.Windows.Forms.Button button_makeAppointment;
         public System.Windows.Forms.Button button_profile;
         private System.Windows.Forms.TabControl pageController;
-        private System.Windows.Forms.TabPage page_makeApp;
-        private System.Windows.Forms.TabPage page_showApp;
+        private System.Windows.Forms.TabPage page_makeReservation;
+        private System.Windows.Forms.TabPage page_showReservations;
         private System.Windows.Forms.Button button_yusufSelect;
         private System.Windows.Forms.Button button_burgerSelect;
-        private System.Windows.Forms.TabPage page_makeApp_Detail;
+        private System.Windows.Forms.TabPage page_makeReservation_Detail;
         private System.Windows.Forms.Label page_makeApp_detail_text;
         private System.Windows.Forms.TabPage page_profile;
         private System.Windows.Forms.Label profile_surname;
@@ -526,5 +550,7 @@ namespace RestaurantSystem
         private Label page_makeApp_detail_label2;
         private Button page_makeApp_detail_confirm;
         private Button page_makeApp_detail_return;
+        private Label show_reservations;
+        private Label show_reservations_text;
     }
 }

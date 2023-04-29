@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,12 +29,13 @@ namespace RestaurantSystem
         //
         private void button_makeAppointment_Click(object sender, EventArgs e)
         {
-            pageController.SelectedTab = page_makeApp;
+            pageController.SelectedTab = page_makeReservation;
             changeCurrentMainButton(button_makeAppointment);
         }
         private void button_showAppointments_Click(object sender, EventArgs e)
         {
-            pageController.SelectedTab = page_showApp;
+            
+            pageController.SelectedTab = page_showReservations;
             changeCurrentMainButton(button_showAppointments);
         }
         private void button_profile_Click(object sender, EventArgs e)
@@ -50,6 +52,18 @@ namespace RestaurantSystem
             loginScreen.Show();
         }
         //
+        //Rezervasyonları yazdırma
+        //
+        
+        private void listReservations()
+        {
+            //loginCol kullanılarak satırdaki kişiden reservasyonlar çekilecek
+            for(int i = 0;i<100;i++)
+            {
+                show_reservations.Text += "\n" + "";
+            }
+        }
+        //
         // Ana button'u (Seçilmiş butonnu) ayarlayan fonksiyon
         //
         private void changeCurrentMainButton(Button newCurrentButton)
@@ -60,9 +74,9 @@ namespace RestaurantSystem
             button_showAppointments.Enabled = true;
             button_profile.Enabled = true;
             //all size
-            button_makeAppointment.Size = new Size(100, 80);
-            button_showAppointments.Size = new Size(100, 80);
-            button_profile.Size = new Size(100, 80);
+            button_makeAppointment.Size = new Size(127, 80);
+            button_showAppointments.Size = new Size(127, 80);
+            button_profile.Size = new Size(127, 80);
             //all back color
             button_makeAppointment.BackColor = Color.FromArgb(30, 30, 30);
             button_showAppointments.BackColor = Color.FromArgb(30, 30, 30);
@@ -77,24 +91,23 @@ namespace RestaurantSystem
             button_profile.FlatAppearance.BorderColor = Color.White;
             //current
             currentMainButton.Enabled = false;
-            currentMainButton.Size = new Size(135,80);
+            currentMainButton.Size = new Size(150,80);
             currentMainButton.BackColor = Color.FromArgb(100, 255, 100);
             currentMainButton.FlatAppearance.BorderColor = Color.FromArgb(100,255,100);
             currentMainButton.ForeColor = Color.FromArgb(30, 30, 30);
-
         }
         //
         //Randevu oluşturma sayfası buttonları
         //
         private void button_yusufSelectClick(object sender, EventArgs e)
         {
-            pageController.SelectedTab = page_makeApp_Detail;
+            pageController.SelectedTab = page_makeReservation_Detail;
             page_makeApp_detail_title.Text = "Köfteci Yusuf";
         }
 
         private void button_burgerSelectClick(object sender, EventArgs e)
         {
-            pageController.SelectedTab = page_makeApp_Detail;
+            pageController.SelectedTab = page_makeReservation_Detail;
             page_makeApp_detail_title.Text = "Burger King";
         }
         //
@@ -168,7 +181,7 @@ namespace RestaurantSystem
         //
         private void page_makeApp_detail_return_Click(object sender, EventArgs e)
         {
-            pageController.SelectedTab = page_makeApp;
+            pageController.SelectedTab = page_makeReservation;
         }
 
         private void page_makeApp_detail_confirm_Click(object sender, EventArgs e)

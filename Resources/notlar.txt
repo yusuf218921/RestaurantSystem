@@ -4,3 +4,4 @@ profile_name, profile_surname, profile_email ve profile_tel label'ları databese
 Yani public MainScreen() fonksiyonu içindeki + dan sonra isim vs gelecek
 SignupScreen.Designer.cs 181. satır buttonSignupTest - buttonSignUp_Click olarak değişecek
 LoginScreen.Designer.cs 59. satır buttonSignIn_Test - buttonSigninClick olarak değişecek
+MainScreen.cs üzerinde 56. fonksiyonda database bağlantısı yapılacak 
