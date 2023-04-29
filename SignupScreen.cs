@@ -108,9 +108,8 @@ namespace RestaurantSystem
                     command.Parameters.AddWithValue("@addresstext", richTextBox_Adress.Text);
                     int _rowsAffected = command.ExecuteNonQuery();
                     connection.Close();
-                    label_message.ForeColor = Color.FromArgb(100,100,255);
+                    label_message.ForeColor = Color.FromArgb(100, 255, 100);
                     label_message.Text = "Başarılı bir şekilde kayıt oluşturdu.";
-                    this.Close();
                 }
                 else if (!user_control)
                 {
