@@ -131,7 +131,7 @@
             // 
             // panel_logo
             // 
-            this.panel_logo.BackgroundImage = global::RestaurantSystem.Properties.Resources._8e7392e045afce4456720c1aef91c013;
+            this.panel_logo.BackgroundImage = global::RestaurantSystem.Properties.Resources.logoDesign;
             this.panel_logo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_logo.Location = new System.Drawing.Point(0, 0);
             this.panel_logo.Name = "panel_logo";

@@ -63,9 +63,9 @@ namespace RestaurantSystem.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap _8e7392e045afce4456720c1aef91c013 {
+        internal static System.Drawing.Bitmap hideIcon {
             get {
-                object obj = ResourceManager.GetObject("8e7392e045afce4456720c1aef91c013", resourceCulture);
+                object obj = ResourceManager.GetObject("hideIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,39 +73,9 @@ namespace RestaurantSystem.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap Colorlib_Reg_Form_v7 {
+        internal static System.Drawing.Bitmap logoDesign {
             get {
-                object obj = ResourceManager.GetObject("Colorlib-Reg-Form-v7", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
-        /// </summary>
-        internal static System.Drawing.Bitmap eye_password_hide_icon_512x512_iv45hct9 {
-            get {
-                object obj = ResourceManager.GetObject("eye-password-hide-icon-512x512-iv45hct9", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
-        /// </summary>
-        internal static System.Drawing.Bitmap eye_password_hide_icon_512x512_iv45hct91 {
-            get {
-                object obj = ResourceManager.GetObject("eye-password-hide-icon-512x512-iv45hct91", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
-        /// </summary>
-        internal static System.Drawing.Bitmap untitled {
-            get {
-                object obj = ResourceManager.GetObject("untitled", resourceCulture);
+                object obj = ResourceManager.GetObject("logoDesign", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

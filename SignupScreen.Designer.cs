@@ -291,7 +291,7 @@
             // button_showHide
             // 
             this.button_showHide.BackColor = System.Drawing.Color.White;
-            this.button_showHide.BackgroundImage = global::RestaurantSystem.Properties.Resources.eye_password_hide_icon_512x512_iv45hct91;
+            this.button_showHide.BackgroundImage = global::RestaurantSystem.Properties.Resources.hideIcon;
             this.button_showHide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_showHide.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button_showHide.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;

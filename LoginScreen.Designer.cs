@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            
             this.button_signin = new System.Windows.Forms.Button();
             this.textbox_password = new System.Windows.Forms.TextBox();
             this.textbox_username = new System.Windows.Forms.TextBox();
@@ -40,10 +39,6 @@
             this.button_showHide = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
-            //
-            //password hide
-            //
-            this.textbox_password.UseSystemPasswordChar = true;
             // 
             // button_signin
             // 
@@ -67,6 +62,7 @@
             this.textbox_password.Name = "textbox_password";
             this.textbox_password.Size = new System.Drawing.Size(250, 20);
             this.textbox_password.TabIndex = 2;
+            this.textbox_password.UseSystemPasswordChar = true;
             // 
             // textbox_username
             // 
@@ -95,7 +91,7 @@
             this.label_password.BackColor = System.Drawing.Color.Transparent;
             this.label_password.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_password.ForeColor = System.Drawing.Color.White;
-            this.label_password.Location = new System.Drawing.Point(432, 201);
+            this.label_password.Location = new System.Drawing.Point(430, 199);
             this.label_password.Name = "label_password";
             this.label_password.Size = new System.Drawing.Size(45, 21);
             this.label_password.TabIndex = 5;
@@ -143,7 +139,7 @@
             // button_showHide
             // 
             this.button_showHide.BackColor = System.Drawing.Color.White;
-            this.button_showHide.BackgroundImage = global::RestaurantSystem.Properties.Resources.eye_password_hide_icon_512x512_iv45hct91;
+            this.button_showHide.BackgroundImage = global::RestaurantSystem.Properties.Resources.hideIcon;
             this.button_showHide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_showHide.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button_showHide.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -159,7 +155,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackgroundImage = global::RestaurantSystem.Properties.Resources._8e7392e045afce4456720c1aef91c013;
+            this.panel1.BackgroundImage = global::RestaurantSystem.Properties.Resources.logoDesign;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
