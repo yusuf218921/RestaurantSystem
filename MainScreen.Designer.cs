@@ -52,18 +52,12 @@ namespace RestaurantSystem
             this.page_showReservations_text = new System.Windows.Forms.Label();
             this.page_showReservations_label = new System.Windows.Forms.Label();
             this.page_profile = new System.Windows.Forms.TabPage();
-            this.profile_message = new System.Windows.Forms.Label();
-            this.profile_textbox_name = new System.Windows.Forms.TextBox();
-            this.profile_textbox_tel = new System.Windows.Forms.TextBox();
-            this.profile_textbox_email = new System.Windows.Forms.TextBox();
-            this.profile_textbox_surname = new System.Windows.Forms.TextBox();
-            this.profile_button_save = new System.Windows.Forms.Button();
-            this.profile_button_edit = new System.Windows.Forms.Button();
             this.profile_surname = new System.Windows.Forms.Label();
             this.profile_name = new System.Windows.Forms.Label();
             this.profile_tel = new System.Windows.Forms.Label();
             this.profile_email = new System.Windows.Forms.Label();
             this.profile_username = new System.Windows.Forms.Label();
+            this.page_getRes_Detail_message = new System.Windows.Forms.Label();
             this.pageController.SuspendLayout();
             this.page_getRes.SuspendLayout();
             this.page_getRes_Detail.SuspendLayout();
@@ -200,6 +194,7 @@ namespace RestaurantSystem
             // page_getRes_Detail
             // 
             this.page_getRes_Detail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.page_getRes_Detail.Controls.Add(this.page_getRes_Detail_message);
             this.page_getRes_Detail.Controls.Add(this.page_getRes_detail_return);
             this.page_getRes_Detail.Controls.Add(this.page_getRes_detail_confirm);
             this.page_getRes_Detail.Controls.Add(this.page_getRes_detail_label2);
@@ -337,13 +332,6 @@ namespace RestaurantSystem
             // page_profile
             // 
             this.page_profile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.page_profile.Controls.Add(this.profile_message);
-            this.page_profile.Controls.Add(this.profile_textbox_name);
-            this.page_profile.Controls.Add(this.profile_textbox_tel);
-            this.page_profile.Controls.Add(this.profile_textbox_email);
-            this.page_profile.Controls.Add(this.profile_textbox_surname);
-            this.page_profile.Controls.Add(this.profile_button_save);
-            this.page_profile.Controls.Add(this.profile_button_edit);
             this.page_profile.Controls.Add(this.profile_surname);
             this.page_profile.Controls.Add(this.profile_name);
             this.page_profile.Controls.Add(this.profile_tel);
@@ -355,90 +343,13 @@ namespace RestaurantSystem
             this.page_profile.Size = new System.Drawing.Size(805, 457);
             this.page_profile.TabIndex = 4;
             // 
-            // profile_message
-            // 
-            this.profile_message.AutoSize = true;
-            this.profile_message.BackColor = System.Drawing.Color.Transparent;
-            this.profile_message.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.profile_message.ForeColor = System.Drawing.Color.White;
-            this.profile_message.Location = new System.Drawing.Point(506, 289);
-            this.profile_message.Name = "profile_message";
-            this.profile_message.Size = new System.Drawing.Size(0, 19);
-            this.profile_message.TabIndex = 26;
-            // 
-            // profile_textbox_name
-            // 
-            this.profile_textbox_name.Location = new System.Drawing.Point(413, 125);
-            this.profile_textbox_name.Name = "profile_textbox_name";
-            this.profile_textbox_name.Size = new System.Drawing.Size(251, 29);
-            this.profile_textbox_name.TabIndex = 25;
-            this.profile_textbox_name.Visible = false;
-            // 
-            // profile_textbox_tel
-            // 
-            this.profile_textbox_tel.Location = new System.Drawing.Point(413, 238);
-            this.profile_textbox_tel.Name = "profile_textbox_tel";
-            this.profile_textbox_tel.Size = new System.Drawing.Size(251, 29);
-            this.profile_textbox_tel.TabIndex = 24;
-            this.profile_textbox_tel.Visible = false;
-            // 
-            // profile_textbox_email
-            // 
-            this.profile_textbox_email.Location = new System.Drawing.Point(413, 199);
-            this.profile_textbox_email.Name = "profile_textbox_email";
-            this.profile_textbox_email.Size = new System.Drawing.Size(251, 29);
-            this.profile_textbox_email.TabIndex = 23;
-            this.profile_textbox_email.Visible = false;
-            // 
-            // profile_textbox_surname
-            // 
-            this.profile_textbox_surname.Location = new System.Drawing.Point(413, 160);
-            this.profile_textbox_surname.Name = "profile_textbox_surname";
-            this.profile_textbox_surname.Size = new System.Drawing.Size(251, 29);
-            this.profile_textbox_surname.TabIndex = 22;
-            this.profile_textbox_surname.Visible = false;
-            // 
-            // profile_button_save
-            // 
-            this.profile_button_save.Enabled = false;
-            this.profile_button_save.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(100)))));
-            this.profile_button_save.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(100)))), ((int)(((byte)(40)))));
-            this.profile_button_save.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(100)))), ((int)(((byte)(40)))));
-            this.profile_button_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.profile_button_save.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.profile_button_save.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(100)))));
-            this.profile_button_save.Location = new System.Drawing.Point(412, 284);
-            this.profile_button_save.Name = "profile_button_save";
-            this.profile_button_save.Size = new System.Drawing.Size(74, 29);
-            this.profile_button_save.TabIndex = 19;
-            this.profile_button_save.Text = "Kaydet";
-            this.profile_button_save.UseVisualStyleBackColor = true;
-            this.profile_button_save.Visible = false;
-            this.profile_button_save.Click += new System.EventHandler(this.profile_button_save_Click);
-            // 
-            // profile_button_edit
-            // 
-            this.profile_button_edit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
-            this.profile_button_edit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(100)))));
-            this.profile_button_edit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(100)))));
-            this.profile_button_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.profile_button_edit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.profile_button_edit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
-            this.profile_button_edit.Location = new System.Drawing.Point(332, 284);
-            this.profile_button_edit.Name = "profile_button_edit";
-            this.profile_button_edit.Size = new System.Drawing.Size(74, 29);
-            this.profile_button_edit.TabIndex = 18;
-            this.profile_button_edit.Text = "Düzenle";
-            this.profile_button_edit.UseVisualStyleBackColor = true;
-            this.profile_button_edit.Click += new System.EventHandler(this.profile_button_edit_Click);
-            // 
             // profile_surname
             // 
             this.profile_surname.AutoSize = true;
             this.profile_surname.BackColor = System.Drawing.Color.Transparent;
             this.profile_surname.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.profile_surname.ForeColor = System.Drawing.Color.White;
-            this.profile_surname.Location = new System.Drawing.Point(329, 163);
+            this.profile_surname.Location = new System.Drawing.Point(251, 163);
             this.profile_surname.Name = "profile_surname";
             this.profile_surname.Size = new System.Drawing.Size(78, 21);
             this.profile_surname.TabIndex = 17;
@@ -450,7 +361,7 @@ namespace RestaurantSystem
             this.profile_name.BackColor = System.Drawing.Color.Transparent;
             this.profile_name.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.profile_name.ForeColor = System.Drawing.Color.White;
-            this.profile_name.Location = new System.Drawing.Point(357, 124);
+            this.profile_name.Location = new System.Drawing.Point(279, 124);
             this.profile_name.Name = "profile_name";
             this.profile_name.Size = new System.Drawing.Size(50, 21);
             this.profile_name.TabIndex = 16;
@@ -462,7 +373,7 @@ namespace RestaurantSystem
             this.profile_tel.BackColor = System.Drawing.Color.Transparent;
             this.profile_tel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.profile_tel.ForeColor = System.Drawing.Color.White;
-            this.profile_tel.Location = new System.Drawing.Point(332, 241);
+            this.profile_tel.Location = new System.Drawing.Point(254, 241);
             this.profile_tel.Name = "profile_tel";
             this.profile_tel.Size = new System.Drawing.Size(75, 21);
             this.profile_tel.TabIndex = 15;
@@ -474,7 +385,7 @@ namespace RestaurantSystem
             this.profile_email.BackColor = System.Drawing.Color.Transparent;
             this.profile_email.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.profile_email.ForeColor = System.Drawing.Color.White;
-            this.profile_email.Location = new System.Drawing.Point(328, 202);
+            this.profile_email.Location = new System.Drawing.Point(250, 202);
             this.profile_email.Name = "profile_email";
             this.profile_email.Size = new System.Drawing.Size(79, 21);
             this.profile_email.TabIndex = 14;
@@ -486,11 +397,21 @@ namespace RestaurantSystem
             this.profile_username.BackColor = System.Drawing.Color.Transparent;
             this.profile_username.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.profile_username.ForeColor = System.Drawing.Color.White;
-            this.profile_username.Location = new System.Drawing.Point(292, 82);
+            this.profile_username.Location = new System.Drawing.Point(214, 82);
             this.profile_username.Name = "profile_username";
             this.profile_username.Size = new System.Drawing.Size(115, 21);
             this.profile_username.TabIndex = 12;
             this.profile_username.Text = "Kullanıcı Adı: ";
+            // 
+            // page_getRes_Detail_message
+            // 
+            this.page_getRes_Detail_message.AutoSize = true;
+            this.page_getRes_Detail_message.Font = new System.Drawing.Font("Segoe UI Semibold", 12.4F, System.Drawing.FontStyle.Bold);
+            this.page_getRes_Detail_message.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(100)))));
+            this.page_getRes_Detail_message.Location = new System.Drawing.Point(289, 284);
+            this.page_getRes_Detail_message.Name = "page_getRes_Detail_message";
+            this.page_getRes_Detail_message.Size = new System.Drawing.Size(0, 23);
+            this.page_getRes_Detail_message.TabIndex = 22;
             // 
             // MainScreen
             // 
@@ -536,13 +457,6 @@ namespace RestaurantSystem
         private System.Windows.Forms.Label profile_tel;
         private System.Windows.Forms.Label profile_email;
         private System.Windows.Forms.Label profile_username;
-        private System.Windows.Forms.Button profile_button_save;
-        private System.Windows.Forms.Button profile_button_edit;
-        private System.Windows.Forms.TextBox profile_textbox_tel;
-        private System.Windows.Forms.TextBox profile_textbox_email;
-        private System.Windows.Forms.TextBox profile_textbox_surname;
-        private System.Windows.Forms.TextBox profile_textbox_name;
-        private System.Windows.Forms.Label profile_message;
         private System.Windows.Forms.Label page_getRes_detail_title;
         private System.Windows.Forms.DateTimePicker page_getRes_detail_timePicker;
         private DateTimePicker page_getRes_detail_datePicker;
@@ -552,5 +466,6 @@ namespace RestaurantSystem
         private Button page_getRes_detail_return;
         private Label page_showReservations_text;
         private Label page_showReservations_label;
+        private Label page_getRes_Detail_message;
     }
 }

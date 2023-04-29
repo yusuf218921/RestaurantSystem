@@ -20,11 +20,11 @@ namespace RestaurantSystem
         {
             InitializeComponent();
             this.user = user;
-            profile_username.Text = "Kullanıcı Adı: " + user.Username;
-            profile_name.Text = "İsim: " + user.Name;
-            profile_email.Text = "E posta: " + user.Email;
-            profile_surname.Text = "Soyisim: " + user.Surname;
-            profile_tel.Text = "Telefon: " + user.Tel;
+            profile_username.Text = "Kullanıcı Adı:  " + user.Username;
+            profile_name.Text = "İsim:  " + user.Name;
+            profile_email.Text = "E posta:  " + user.Email;
+            profile_surname.Text = "Soyisim:  " + user.Surname;
+            profile_tel.Text = "Telefon:  " + user.Tel;
             changeCurrentMainButton(button_makeAppointment);
             DBHelper db = new DBHelper();
             SqlConnection connection = db.SqlConnection;
@@ -49,6 +49,7 @@ namespace RestaurantSystem
         //
         private void button_makeAppointment_Click(object sender, EventArgs e)
         {
+            page_getRes_Detail_message.Text = "";
             pageController.SelectedTab = page_getRes;
             changeCurrentMainButton(button_makeAppointment);
         }
@@ -132,12 +133,14 @@ namespace RestaurantSystem
         //
         private void button_yusufSelectClick(object sender, EventArgs e)
         {
+            page_getRes_Detail_message.Text = "";
             pageController.SelectedTab = page_getRes_Detail;
             page_getRes_detail_title.Text = "Köfteci Yusuf";
         }
 
         private void button_burgerSelectClick(object sender, EventArgs e)
         {
+            page_getRes_Detail_message.Text = "";
             pageController.SelectedTab = page_getRes_Detail;
             page_getRes_detail_title.Text = "Burger King";
         }
@@ -146,75 +149,13 @@ namespace RestaurantSystem
         //
         bool doesEditActive = false;
         
-
-        private void profile_button_edit_Click(object sender, EventArgs e)
-        {
-            if(doesEditActive)
-            {
-                doesEditActive = false;
-                profile_message.Text = "";
-                profile_textbox_email.Visible = false;
-                profile_textbox_name.Visible = false;
-                profile_textbox_surname.Visible = false;
-                profile_textbox_tel.Visible = false; 
-                profile_button_save.Visible = false;
-                profile_button_save.Enabled = false;
-                profile_button_edit.Text = "Düzenle";
-                profile_button_edit.ForeColor = Color.FromArgb(100, 100, 255);
-                profile_button_edit.FlatAppearance.BorderColor = Color.FromArgb(100, 100, 255);
-                profile_button_edit.FlatAppearance.MouseDownBackColor = Color.FromArgb(40, 40, 100);
-                profile_button_edit.FlatAppearance.MouseOverBackColor = Color.FromArgb(40, 40, 100);
-            }
-            else
-            {
-                doesEditActive = true;
-                profile_message.Text = "";
-                profile_textbox_email.Visible = true;
-                profile_textbox_name.Visible = true;
-                profile_textbox_surname.Visible = true;
-                profile_textbox_tel.Visible = true;
-                profile_button_save.Visible = true;
-                profile_button_save.Enabled = true;
-                profile_button_edit.Text = "Geri dön";
-                profile_button_edit.ForeColor = Color.Red;
-                profile_button_edit.FlatAppearance.BorderColor = Color.Red;
-                profile_button_edit.FlatAppearance.MouseDownBackColor = Color.FromArgb(100,0,0);
-                profile_button_edit.FlatAppearance.MouseOverBackColor = Color.FromArgb(100, 0, 0);
-
-            }
-        }
-
-        private void profile_button_save_Click(object sender, EventArgs e)
-        {
-            if (!profileCheckNull())
-            {
-                profile_message.ForeColor = Color.Green;
-                profile_message.Text = "Başarıyla kaydedildi.";
-            }
-            else
-            {
-                profile_message.ForeColor = Color.Red;
-                profile_message.Text = "Hatalı değer girdiniz! Lütfen tekrar deneyin.";
-            }
-        }
-        //
-        //girilen değerler boş mu kontrol yapan fonksiyon
-        //
-        private bool profileCheckNull()
-        {
-            if (profile_textbox_email.Text.Equals("")
-                || profile_textbox_name.Text.Equals("")
-                || profile_textbox_surname.Text.Equals("")
-                || profile_textbox_tel.Text.Equals("")
-                ) return true;
-            else return false;
-        }
         //
         //Randevu oluşturma detayına inen sayfadaki buttonlar
         //
         private void page_makeApp_detail_return_Click(object sender, EventArgs e)
         {
             pageController.SelectedTab = page_getRes;
+            page_getRes_Detail_message.Text = "";
         }
 
         private void page_makeApp_detail_confirm_Click(object sender, EventArgs e)
@@ -238,7 +179,7 @@ namespace RestaurantSystem
 
             Reservation reservation = new Reservation(page_getRes_detail_title.Text,date,_time,user.Username);
             user.Reservations.Add(reservation);
-            MessageBox.Show("Randevu başarıyla alındı");
+            page_getRes_Detail_message.Text = "Randevu Başarıyla Alındı";
         }
     }
 }

@@ -108,25 +108,29 @@ namespace RestaurantSystem
                     command.Parameters.AddWithValue("@addresstext", richTextBox_Adress.Text);
                     int _rowsAffected = command.ExecuteNonQuery();
                     connection.Close();
-
-                    MessageBox.Show("Kayıt Başarıyla Oluşturuldu");
+                    label_message.ForeColor = Color.FromArgb(100,100,255);
+                    label_message.Text = "Başarılı bir şekilde kayıt oluşturdu.";
                     this.Close();
                 }
                 else if (!user_control)
                 {
+                    label_message.ForeColor = Color.Red;
                     label_message.Text= "Bu kullanıcı adı daha önce alınmış. Lütfen yeni bir kullanıcı adı giriniz...";
                 }
                 else if (!email_control)
                 {
+                    label_message.ForeColor = Color.Red;
                     label_message.Text = "E posta adresi daha önce alınmış. Lütfen yeni bir e posta giriniz...";
                 }
                 else if (!phone_control)
                 {
+                    label_message.ForeColor = Color.Red;
                     label_message.Text = "Bu telefon numarası daha önce alınmış. Lütfen yeni bir telefon numarası giriniz...";
                 }
             }
             else
             {
+                label_message.ForeColor = Color.Red;
                 label_message.Text = "Lütfen hiçbir değeri boş bırakmayınız";
             }
             
