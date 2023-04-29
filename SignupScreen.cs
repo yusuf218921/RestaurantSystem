@@ -27,7 +27,8 @@ namespace RestaurantSystem
                 bool user_control = true;
                 bool email_control = true;
                 bool phone_control = true;
-                SqlConnection connection = new SqlConnection(@"Data Source=127.0.0.1\SQLEXPRESS,1433;Network Library=DBMSSOCN;Initial Catalog=RestaurantSystem;User ID=SA;Password=218921aa");
+                DBHelper db = new DBHelper();
+                SqlConnection connection = db.SqlConnection;
                 connection.Open();
                 string queryString = "SELECT * FROM [user]";
                 SqlCommand command = new SqlCommand(queryString, connection);
@@ -65,6 +66,13 @@ namespace RestaurantSystem
 
                     int rowsAffected = command.ExecuteNonQuery();
 
+                    queryString = "INSERT INTO [adress] (userid, cityid, townid,district,postalcode,adresstext) VALUES (@userid, @cityid, @townid, @district, @postalcode, @adresstext)";
+                    command.Parameters.AddWithValue("@userid", textbox_username.Text);
+                    command.Parameters.AddWithValue("@cityid", textbox_password.Text);
+                    command.Parameters.AddWithValue("@townid", textbox_name.Text);
+                    command.Parameters.AddWithValue("@district", textbox_surname.Text);
+                    command.Parameters.AddWithValue("@postalcode", textbox_email.Text);
+                    command.Parameters.AddWithValue("@adresstext", textbox_phone.Text);
                     connection.Close();
 
                     MessageBox.Show("Kayıt Başarıyla Oluşturuldu");
@@ -91,11 +99,7 @@ namespace RestaurantSystem
         }
         private void buttonSignupTest(object sender, EventArgs e)
         {
-            if (checkNull())
-            
-            {
-                label_message.Text = "Lütfen hiçbir değeri boş bırakmayınız";
-            }
+
         }
 
         bool doShowHideActive = true;

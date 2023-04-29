@@ -178,7 +178,7 @@
             this.buttonSignUp.TabIndex = 12;
             this.buttonSignUp.Text = "Kayıt Ol";
             this.buttonSignUp.UseVisualStyleBackColor = true;
-            this.buttonSignUp.Click += new System.EventHandler(this.buttonSignupTest);
+            this.buttonSignUp.Click += new System.EventHandler(this.buttonSignUp_Click);
             // 
             // textbox_phone
             // 
