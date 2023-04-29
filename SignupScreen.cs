@@ -85,7 +85,6 @@ namespace RestaurantSystem
                     {
                         user_id = (int)reader["id"];
                     }
-                    MessageBox.Show(user_id.ToString());
                     reader.Close();
                     queryString = "Select * FROM [towns]";
                     command = new SqlCommand(queryString, connection);

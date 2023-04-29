@@ -82,7 +82,7 @@ namespace RestaurantSystem
             //loginCol kullanılarak satırdaki kişiden reservasyonlar çekilecek
             foreach (Reservation reservation in user.Reservations)
             {
-                show_reservations.Text += "\n" + reservation.Restourant + " - " + reservation.Date.Substring(0,12) + " - "
+                show_reservations.Text += "\n" + reservation.Restourant + " - " + reservation.Date.Substring(0,10) + " - "
                     + reservation.Hour;
             }
         }
