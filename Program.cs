@@ -8,7 +8,7 @@ namespace RestaurantSystem
 {
     internal static class Program
     {
-        public static string userName;
+        public static int loginCol;
         [STAThread]
 
         static void Main()

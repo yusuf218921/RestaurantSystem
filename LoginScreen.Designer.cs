@@ -38,23 +38,25 @@
             this.label_welcome = new System.Windows.Forms.Label();
             this.button_showHide = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label_message = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_signin
             // 
-            this.button_signin.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button_signin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button_signin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button_signin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(100)))));
+            this.button_signin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(100)))), ((int)(((byte)(40)))));
+            this.button_signin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(100)))), ((int)(((byte)(40)))));
             this.button_signin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_signin.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.button_signin.ForeColor = System.Drawing.Color.White;
+            this.button_signin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(100)))));
             this.button_signin.Location = new System.Drawing.Point(703, 246);
             this.button_signin.Name = "button_signin";
             this.button_signin.Size = new System.Drawing.Size(65, 25);
             this.button_signin.TabIndex = 0;
             this.button_signin.Text = "Giriş Yap";
             this.button_signin.UseVisualStyleBackColor = true;
-            this.button_signin.Click += new System.EventHandler(this.buttonSignIn_Click);
+            this.button_signin.Click += new System.EventHandler(this.buttonSignIn_Test);
             // 
             // textbox_password
             // 
@@ -99,12 +101,12 @@
             // 
             // button_signup
             // 
-            this.button_signup.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button_signup.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button_signup.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button_signup.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.button_signup.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(100)))));
+            this.button_signup.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(100)))));
             this.button_signup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_signup.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.button_signup.ForeColor = System.Drawing.Color.White;
+            this.button_signup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.button_signup.Location = new System.Drawing.Point(623, 246);
             this.button_signup.Name = "button_signup";
             this.button_signup.Size = new System.Drawing.Size(65, 25);
@@ -130,7 +132,7 @@
             this.label_welcome.AutoSize = true;
             this.label_welcome.Font = new System.Drawing.Font("Segoe UI", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_welcome.ForeColor = System.Drawing.Color.White;
-            this.label_welcome.Location = new System.Drawing.Point(400, 100);
+            this.label_welcome.Location = new System.Drawing.Point(400, 87);
             this.label_welcome.Name = "label_welcome";
             this.label_welcome.Size = new System.Drawing.Size(200, 40);
             this.label_welcome.TabIndex = 15;
@@ -142,8 +144,8 @@
             this.button_showHide.BackgroundImage = global::RestaurantSystem.Properties.Resources.hideIcon;
             this.button_showHide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_showHide.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button_showHide.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button_showHide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button_showHide.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button_showHide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.button_showHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_showHide.ForeColor = System.Drawing.Color.White;
             this.button_showHide.Location = new System.Drawing.Point(750, 203);
@@ -163,12 +165,41 @@
             this.panel1.TabIndex = 12;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // label_message
+            // 
+            this.label_message.AutoSize = true;
+            this.label_message.BackColor = System.Drawing.Color.Transparent;
+            this.label_message.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label_message.ForeColor = System.Drawing.Color.Red;
+            this.label_message.Location = new System.Drawing.Point(403, 136);
+            this.label_message.Name = "label_message";
+            this.label_message.Size = new System.Drawing.Size(0, 21);
+            this.label_message.TabIndex = 17;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(421, 246);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(65, 25);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Çıkış";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // LoginScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(804, 461);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label_message);
             this.Controls.Add(this.label_welcome);
             this.Controls.Add(this.button_showHide);
             this.Controls.Add(this.panel1);
@@ -199,6 +230,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label_welcome;
         private System.Windows.Forms.Button button_showHide;
+        private System.Windows.Forms.Label label_message;
+        private System.Windows.Forms.Button button1;
     }
 }
 

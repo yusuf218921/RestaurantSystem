@@ -73,6 +73,16 @@ namespace RestaurantSystem.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap kofteciyLogo {
+            get {
+                object obj = ResourceManager.GetObject("kofteciyLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap logoDesign {
             get {
                 object obj = ResourceManager.GetObject("logoDesign", resourceCulture);

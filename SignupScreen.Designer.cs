@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBoxUsername = new System.Windows.Forms.TextBox();
+            this.textbox_username = new System.Windows.Forms.TextBox();
             this.textbox_password = new System.Windows.Forms.TextBox();
-            this.textBoxFirstName = new System.Windows.Forms.TextBox();
-            this.textBoxLastname = new System.Windows.Forms.TextBox();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.textbox_name = new System.Windows.Forms.TextBox();
+            this.textbox_surname = new System.Windows.Forms.TextBox();
+            this.textbox_email = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,28 +40,28 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.buttonSignUp = new System.Windows.Forms.Button();
-            this.textBoxPhone = new System.Windows.Forms.TextBox();
+            this.textbox_phone = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBoxCity = new System.Windows.Forms.ComboBox();
+            this.comboBox_City = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBoxTown = new System.Windows.Forms.ComboBox();
-            this.comboBoxDistrict = new System.Windows.Forms.ComboBox();
+            this.comboBox_Town = new System.Windows.Forms.ComboBox();
+            this.comboBox_District = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBoxPostalCode = new System.Windows.Forms.TextBox();
-            this.richTextBoxAdress = new System.Windows.Forms.RichTextBox();
+            this.textbox_postalCode = new System.Windows.Forms.TextBox();
+            this.richTextBox_Adress = new System.Windows.Forms.RichTextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.button_showHide = new System.Windows.Forms.Button();
             this.button_return = new System.Windows.Forms.Button();
             this.label_message = new System.Windows.Forms.Label();
+            this.button_showHide = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBoxUsername
+            // textbox_username
             // 
-            this.textBoxUsername.Location = new System.Drawing.Point(134, 88);
-            this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(251, 20);
-            this.textBoxUsername.TabIndex = 1;
+            this.textbox_username.Location = new System.Drawing.Point(134, 88);
+            this.textbox_username.Name = "textbox_username";
+            this.textbox_username.Size = new System.Drawing.Size(251, 20);
+            this.textbox_username.TabIndex = 1;
             // 
             // textbox_password
             // 
@@ -71,26 +71,26 @@
             this.textbox_password.TabIndex = 2;
             this.textbox_password.UseSystemPasswordChar = true;
             // 
-            // textBoxFirstName
+            // textbox_name
             // 
-            this.textBoxFirstName.Location = new System.Drawing.Point(134, 166);
-            this.textBoxFirstName.Name = "textBoxFirstName";
-            this.textBoxFirstName.Size = new System.Drawing.Size(251, 20);
-            this.textBoxFirstName.TabIndex = 3;
+            this.textbox_name.Location = new System.Drawing.Point(134, 166);
+            this.textbox_name.Name = "textbox_name";
+            this.textbox_name.Size = new System.Drawing.Size(251, 20);
+            this.textbox_name.TabIndex = 3;
             // 
-            // textBoxLastname
+            // textbox_surname
             // 
-            this.textBoxLastname.Location = new System.Drawing.Point(134, 205);
-            this.textBoxLastname.Name = "textBoxLastname";
-            this.textBoxLastname.Size = new System.Drawing.Size(251, 20);
-            this.textBoxLastname.TabIndex = 4;
+            this.textbox_surname.Location = new System.Drawing.Point(134, 205);
+            this.textbox_surname.Name = "textbox_surname";
+            this.textbox_surname.Size = new System.Drawing.Size(251, 20);
+            this.textbox_surname.TabIndex = 4;
             // 
-            // textBoxEmail
+            // textbox_email
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(134, 244);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(251, 20);
-            this.textBoxEmail.TabIndex = 5;
+            this.textbox_email.Location = new System.Drawing.Point(134, 244);
+            this.textbox_email.Name = "textbox_email";
+            this.textbox_email.Size = new System.Drawing.Size(251, 20);
+            this.textbox_email.TabIndex = 5;
             // 
             // label2
             // 
@@ -166,26 +166,26 @@
             // 
             // buttonSignUp
             // 
-            this.buttonSignUp.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonSignUp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.buttonSignUp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.buttonSignUp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(100)))));
+            this.buttonSignUp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(100)))), ((int)(((byte)(40)))));
+            this.buttonSignUp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(100)))), ((int)(((byte)(40)))));
             this.buttonSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSignUp.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.buttonSignUp.ForeColor = System.Drawing.Color.White;
+            this.buttonSignUp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(100)))));
             this.buttonSignUp.Location = new System.Drawing.Point(689, 354);
             this.buttonSignUp.Name = "buttonSignUp";
             this.buttonSignUp.Size = new System.Drawing.Size(79, 28);
             this.buttonSignUp.TabIndex = 12;
             this.buttonSignUp.Text = "Kayıt Ol";
             this.buttonSignUp.UseVisualStyleBackColor = true;
-            this.buttonSignUp.Click += new System.EventHandler(this.buttonSignUp_Click);
+            this.buttonSignUp.Click += new System.EventHandler(this.buttonSignupTest);
             // 
-            // textBoxPhone
+            // textbox_phone
             // 
-            this.textBoxPhone.Location = new System.Drawing.Point(134, 283);
-            this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new System.Drawing.Size(251, 20);
-            this.textBoxPhone.TabIndex = 13;
+            this.textbox_phone.Location = new System.Drawing.Point(134, 283);
+            this.textbox_phone.Name = "textbox_phone";
+            this.textbox_phone.Size = new System.Drawing.Size(251, 20);
+            this.textbox_phone.TabIndex = 13;
             // 
             // label8
             // 
@@ -199,13 +199,13 @@
             this.label8.TabIndex = 15;
             this.label8.Text = "Şehir";
             // 
-            // comboBoxCity
+            // comboBox_City
             // 
-            this.comboBoxCity.FormattingEnabled = true;
-            this.comboBoxCity.Location = new System.Drawing.Point(518, 88);
-            this.comboBoxCity.Name = "comboBoxCity";
-            this.comboBoxCity.Size = new System.Drawing.Size(251, 21);
-            this.comboBoxCity.TabIndex = 16;
+            this.comboBox_City.FormattingEnabled = true;
+            this.comboBox_City.Location = new System.Drawing.Point(518, 88);
+            this.comboBox_City.Name = "comboBox_City";
+            this.comboBox_City.Size = new System.Drawing.Size(251, 21);
+            this.comboBox_City.TabIndex = 16;
             // 
             // label9
             // 
@@ -232,21 +232,21 @@
             this.label10.TabIndex = 18;
             this.label10.Text = "Mahalle/Köy";
             // 
-            // comboBoxTown
+            // comboBox_Town
             // 
-            this.comboBoxTown.FormattingEnabled = true;
-            this.comboBoxTown.Location = new System.Drawing.Point(518, 127);
-            this.comboBoxTown.Name = "comboBoxTown";
-            this.comboBoxTown.Size = new System.Drawing.Size(251, 21);
-            this.comboBoxTown.TabIndex = 19;
+            this.comboBox_Town.FormattingEnabled = true;
+            this.comboBox_Town.Location = new System.Drawing.Point(518, 127);
+            this.comboBox_Town.Name = "comboBox_Town";
+            this.comboBox_Town.Size = new System.Drawing.Size(251, 21);
+            this.comboBox_Town.TabIndex = 19;
             // 
-            // comboBoxDistrict
+            // comboBox_District
             // 
-            this.comboBoxDistrict.FormattingEnabled = true;
-            this.comboBoxDistrict.Location = new System.Drawing.Point(518, 166);
-            this.comboBoxDistrict.Name = "comboBoxDistrict";
-            this.comboBoxDistrict.Size = new System.Drawing.Size(251, 21);
-            this.comboBoxDistrict.TabIndex = 20;
+            this.comboBox_District.FormattingEnabled = true;
+            this.comboBox_District.Location = new System.Drawing.Point(518, 166);
+            this.comboBox_District.Name = "comboBox_District";
+            this.comboBox_District.Size = new System.Drawing.Size(251, 21);
+            this.comboBox_District.TabIndex = 20;
             // 
             // label11
             // 
@@ -260,21 +260,21 @@
             this.label11.TabIndex = 21;
             this.label11.Text = "Posta Kodu";
             // 
-            // textBoxPostalCode
+            // textbox_postalCode
             // 
-            this.textBoxPostalCode.Location = new System.Drawing.Point(518, 205);
-            this.textBoxPostalCode.Name = "textBoxPostalCode";
-            this.textBoxPostalCode.Size = new System.Drawing.Size(251, 20);
-            this.textBoxPostalCode.TabIndex = 22;
+            this.textbox_postalCode.Location = new System.Drawing.Point(518, 205);
+            this.textbox_postalCode.Name = "textbox_postalCode";
+            this.textbox_postalCode.Size = new System.Drawing.Size(251, 20);
+            this.textbox_postalCode.TabIndex = 22;
             // 
-            // richTextBoxAdress
+            // richTextBox_Adress
             // 
-            this.richTextBoxAdress.Location = new System.Drawing.Point(518, 244);
-            this.richTextBoxAdress.MaxLength = 50;
-            this.richTextBoxAdress.Name = "richTextBoxAdress";
-            this.richTextBoxAdress.Size = new System.Drawing.Size(250, 89);
-            this.richTextBoxAdress.TabIndex = 23;
-            this.richTextBoxAdress.Text = "";
+            this.richTextBox_Adress.Location = new System.Drawing.Point(518, 244);
+            this.richTextBox_Adress.MaxLength = 50;
+            this.richTextBox_Adress.Name = "richTextBox_Adress";
+            this.richTextBox_Adress.Size = new System.Drawing.Size(250, 89);
+            this.richTextBox_Adress.TabIndex = 23;
+            this.richTextBox_Adress.Text = "";
             // 
             // label12
             // 
@@ -288,14 +288,41 @@
             this.label12.TabIndex = 24;
             this.label12.Text = "Adres";
             // 
+            // button_return
+            // 
+            this.button_return.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.button_return.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button_return.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button_return.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_return.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.button_return.ForeColor = System.Drawing.Color.Red;
+            this.button_return.Location = new System.Drawing.Point(592, 354);
+            this.button_return.Name = "button_return";
+            this.button_return.Size = new System.Drawing.Size(79, 28);
+            this.button_return.TabIndex = 26;
+            this.button_return.Text = "Geri Dön";
+            this.button_return.UseVisualStyleBackColor = true;
+            this.button_return.Click += new System.EventHandler(this.button_return_Click);
+            // 
+            // label_message
+            // 
+            this.label_message.AutoSize = true;
+            this.label_message.BackColor = System.Drawing.Color.Transparent;
+            this.label_message.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label_message.ForeColor = System.Drawing.Color.Red;
+            this.label_message.Location = new System.Drawing.Point(130, 354);
+            this.label_message.Name = "label_message";
+            this.label_message.Size = new System.Drawing.Size(0, 21);
+            this.label_message.TabIndex = 27;
+            // 
             // button_showHide
             // 
             this.button_showHide.BackColor = System.Drawing.Color.White;
             this.button_showHide.BackgroundImage = global::RestaurantSystem.Properties.Resources.hideIcon;
             this.button_showHide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_showHide.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button_showHide.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button_showHide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button_showHide.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button_showHide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.button_showHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_showHide.ForeColor = System.Drawing.Color.White;
             this.button_showHide.Location = new System.Drawing.Point(366, 128);
@@ -304,32 +331,6 @@
             this.button_showHide.TabIndex = 25;
             this.button_showHide.UseVisualStyleBackColor = false;
             this.button_showHide.Click += new System.EventHandler(this.buttonShowHide_Click);
-            // 
-            // button_return
-            // 
-            this.button_return.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button_return.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button_return.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button_return.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_return.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.button_return.ForeColor = System.Drawing.Color.White;
-            this.button_return.Location = new System.Drawing.Point(592, 354);
-            this.button_return.Name = "button_return";
-            this.button_return.Size = new System.Drawing.Size(79, 28);
-            this.button_return.TabIndex = 26;
-            this.button_return.Text = "Geri Dön";
-            this.button_return.UseVisualStyleBackColor = true;
-            // 
-            // label_message
-            // 
-            this.label_message.AutoSize = true;
-            this.label_message.BackColor = System.Drawing.Color.Transparent;
-            this.label_message.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label_message.ForeColor = System.Drawing.Color.Red;
-            this.label_message.Location = new System.Drawing.Point(31, 328);
-            this.label_message.Name = "label_message";
-            this.label_message.Size = new System.Drawing.Size(0, 21);
-            this.label_message.TabIndex = 27;
             // 
             // SignupScreen
             // 
@@ -341,16 +342,16 @@
             this.Controls.Add(this.button_return);
             this.Controls.Add(this.button_showHide);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.richTextBoxAdress);
-            this.Controls.Add(this.textBoxPostalCode);
+            this.Controls.Add(this.richTextBox_Adress);
+            this.Controls.Add(this.textbox_postalCode);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.comboBoxDistrict);
-            this.Controls.Add(this.comboBoxTown);
+            this.Controls.Add(this.comboBox_District);
+            this.Controls.Add(this.comboBox_Town);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.comboBoxCity);
+            this.Controls.Add(this.comboBox_City);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBoxPhone);
+            this.Controls.Add(this.textbox_phone);
             this.Controls.Add(this.buttonSignUp);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -358,11 +359,11 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBoxEmail);
-            this.Controls.Add(this.textBoxLastname);
-            this.Controls.Add(this.textBoxFirstName);
+            this.Controls.Add(this.textbox_email);
+            this.Controls.Add(this.textbox_surname);
+            this.Controls.Add(this.textbox_name);
             this.Controls.Add(this.textbox_password);
-            this.Controls.Add(this.textBoxUsername);
+            this.Controls.Add(this.textbox_username);
             this.Name = "SignupScreen";
             this.Text = "Form2";
             this.ResumeLayout(false);
@@ -371,11 +372,11 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBoxUsername;
+        private System.Windows.Forms.TextBox textbox_username;
         private System.Windows.Forms.TextBox textbox_password;
-        private System.Windows.Forms.TextBox textBoxFirstName;
-        private System.Windows.Forms.TextBox textBoxLastname;
-        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.TextBox textbox_name;
+        private System.Windows.Forms.TextBox textbox_surname;
+        private System.Windows.Forms.TextBox textbox_email;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -383,16 +384,16 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button buttonSignUp;
-        private System.Windows.Forms.TextBox textBoxPhone;
+        private System.Windows.Forms.TextBox textbox_phone;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBoxCity;
+        private System.Windows.Forms.ComboBox comboBox_City;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBoxTown;
-        private System.Windows.Forms.ComboBox comboBoxDistrict;
+        private System.Windows.Forms.ComboBox comboBox_Town;
+        private System.Windows.Forms.ComboBox comboBox_District;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBoxPostalCode;
-        private System.Windows.Forms.RichTextBox richTextBoxAdress;
+        private System.Windows.Forms.TextBox textbox_postalCode;
+        private System.Windows.Forms.RichTextBox richTextBox_Adress;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button_showHide;
         private System.Windows.Forms.Button button_return;

@@ -20,67 +20,85 @@ namespace RestaurantSystem
 
         private void buttonSignUp_Click(object sender, EventArgs e)
         {
-            bool user_control = true;
-            bool email_control = true;
-            bool phone_control = true;
-            SqlConnection connection = new SqlConnection(@"Data Source=127.0.0.1\SQLEXPRESS,1433;Network Library=DBMSSOCN;Initial Catalog=RestaurantSystem;User ID=SA;Password=218921aa");
-            connection.Open();
-            string queryString = "SELECT * FROM [user]";
-            SqlCommand command = new SqlCommand(queryString, connection);
-            SqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+            
+            if (!checkNull())
             {
-                if (reader["username"].ToString() == textBoxUsername.Text)
+                label_message.Text = "";
+                bool user_control = true;
+                bool email_control = true;
+                bool phone_control = true;
+                SqlConnection connection = new SqlConnection(@"Data Source=127.0.0.1\SQLEXPRESS,1433;Network Library=DBMSSOCN;Initial Catalog=RestaurantSystem;User ID=SA;Password=218921aa");
+                connection.Open();
+                string queryString = "SELECT * FROM [user]";
+                SqlCommand command = new SqlCommand(queryString, connection);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
                 {
-                    user_control = false;
-                    break;
+                    if (reader["username"].ToString() == textbox_username.Text)
+                    {
+                        user_control = false;
+                        break;
+                    }
+                    else if (reader["email"].ToString() == textbox_email.Text)
+                    {
+                        email_control = false;
+                        break;
+                    }
+                    else if (reader["phoneNumber"].ToString() == textbox_phone.Text)
+                    {
+                        phone_control = false;
+                        break;
+                    }
+
                 }
-                else if (reader["email"].ToString() == textBoxEmail.Text)
+                reader.Close();
+                if (user_control && email_control && phone_control)
                 {
-                    email_control = false;
-                    break;
+                    queryString = "INSERT INTO [user] (username, password, firstname,lastname,email,phoneNumber) VALUES (@username, @password, @firstname,@lastname,@email,@phoneNumber)";
+                    command = new SqlCommand(queryString, connection);
+                    command.Parameters.AddWithValue("@username", textbox_username.Text);
+                    command.Parameters.AddWithValue("@password", textbox_password.Text);
+                    command.Parameters.AddWithValue("@firstname", textbox_name.Text);
+                    command.Parameters.AddWithValue("@lastname", textbox_surname.Text);
+                    command.Parameters.AddWithValue("@email", textbox_email.Text);
+                    command.Parameters.AddWithValue("@phoneNumber", textbox_phone.Text);
+
+                    int rowsAffected = command.ExecuteNonQuery();
+
+                    connection.Close();
+
+                    MessageBox.Show("Kayıt Başarıyla Oluşturuldu");
+                    this.Close();
                 }
-                else if (reader["phoneNumber"].ToString() == textBoxPhone.Text)
+                else if (!user_control)
                 {
-                    phone_control = false;
-                    break;
+                    label_message.Text= "Bu kullanıcı adı daha önce alınmış. Lütfen yeni bir kullanıcı adı giriniz...";
                 }
-                
+                else if (!email_control)
+                {
+                    label_message.Text = "E posta adresi daha önce alınmış. Lütfen yeni bir e posta giriniz...";
+                }
+                else if (!phone_control)
+                {
+                    label_message.Text = "Bu telefon numarası daha önce alınmış. Lütfen yeni bir telefon numarası giriniz...";
+                }
             }
-            reader.Close();
-            if(user_control && email_control && phone_control)
+            else
             {
-                queryString = "INSERT INTO [user] (username, password, firstname,lastname,email,phoneNumber) VALUES (@username, @password, @firstname,@lastname,@email,@phoneNumber)";
-                command = new SqlCommand(queryString, connection);
-                command.Parameters.AddWithValue("@username", textBoxUsername.Text);
-                command.Parameters.AddWithValue("@password", textbox_password.Text);
-                command.Parameters.AddWithValue("@firstname", textBoxFirstName.Text);
-                command.Parameters.AddWithValue("@lastname", textBoxLastname.Text);
-                command.Parameters.AddWithValue("@email", textBoxEmail.Text);
-                command.Parameters.AddWithValue("@phoneNumber", textBoxPhone.Text);
-
-                int rowsAffected = command.ExecuteNonQuery();
-
-                connection.Close();
-
-                MessageBox.Show("Kayıt Başarıyla Oluşturuldu");
-                this.Close();
+                label_message.Text = "Lütfen hiçbir değeri boş bırakmayınız";
             }
-            else if(!user_control)
+            
+        }
+        private void buttonSignupTest(object sender, EventArgs e)
+        {
+            if (checkNull())
+            
             {
-                MessageBox.Show("Girmiş olduğunuz Kullanıcı Adı daha önce alınmış lütfen yeni bir kullanıcı adı oluşturunuz...");
-            }
-            else if (!email_control)
-            {
-                MessageBox.Show("Girmiş olduğunuz E-posta daha önce alınmış lütfen yeni bir E-posta giriniz...");
-            }
-            else if (!phone_control)
-            {
-                MessageBox.Show("Girmiş olduğunuz Telefon numarası daha önce alınmış lütfen yeni bir Telefon numarası giriniz...");
+                label_message.Text = "Lütfen hiçbir değeri boş bırakmayınız";
             }
         }
 
-        bool doShowHideActive = false;
+        bool doShowHideActive = true;
         private void buttonShowHide_Click(object sender, EventArgs e)
         {
 
@@ -94,6 +112,27 @@ namespace RestaurantSystem
                 textbox_password.UseSystemPasswordChar = true;
                 doShowHideActive = true;
             }
+        }
+
+        private void button_return_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form loginScreen = new LoginScreen();
+            loginScreen.Closed += (s, args) => this.Close();
+            loginScreen.Show();
+        }
+        private bool checkNull()
+        {
+            if (
+                textbox_username.Text.Equals("")
+                || textbox_password.Text.Equals("")
+                || textbox_name.Text.Equals("")
+                || textbox_surname.Text.Equals("")
+                || textbox_email.Text.Equals("")
+                || textbox_phone.Text.Equals("")
+                || textbox_postalCode.Text.Equals("")
+                ) return true;
+            else return false;
         }
     }
 }

@@ -77,12 +77,12 @@
             // 
             // button_control
             // 
-            this.button_control.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button_control.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button_control.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button_control.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(100)))));
+            this.button_control.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(100)))), ((int)(((byte)(40)))));
+            this.button_control.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(100)))), ((int)(((byte)(40)))));
             this.button_control.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_control.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.button_control.ForeColor = System.Drawing.Color.White;
+            this.button_control.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(100)))));
             this.button_control.Location = new System.Drawing.Point(690, 280);
             this.button_control.Name = "button_control";
             this.button_control.Size = new System.Drawing.Size(79, 28);
@@ -140,12 +140,12 @@
             // 
             // button_return
             // 
-            this.button_return.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button_return.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button_return.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button_return.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.button_return.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button_return.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button_return.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_return.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.button_return.ForeColor = System.Drawing.Color.White;
+            this.button_return.ForeColor = System.Drawing.Color.Red;
             this.button_return.Location = new System.Drawing.Point(593, 280);
             this.button_return.Name = "button_return";
             this.button_return.Size = new System.Drawing.Size(79, 28);

@@ -1,0 +1,6 @@
+page_makeApp_detail_confirm_Click fonksiyonu database'e bağlanacak
+profile_button_save_Click fonksiyonu database'e bağlanacak
+profile_name, profile_surname, profile_email ve profile_tel label'ları databeseden çekilecek
+Yani public MainScreen() fonksiyonu içindeki + dan sonra isim vs gelecek
+SignupScreen.Designer.cs 181. satır buttonSignupTest - buttonSignUp_Click olarak değişecek
+LoginScreen.Designer.cs 59. satır buttonSignIn_Test - buttonSigninClick olarak değişecek

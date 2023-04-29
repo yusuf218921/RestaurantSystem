@@ -17,44 +17,45 @@ namespace RestaurantSystem
         {
             InitializeComponent();
         }
-
+        bool login = false;
         private void buttonSignIn_Click(object sender, EventArgs e)
-        {/*
-            bool login = false;
+        {
             SqlConnection connection = new SqlConnection(@"Data Source=127.0.0.1\SQLEXPRESS,1433;Network Library=DBMSSOCN;Initial Catalog=RestaurantSystem;User ID=SA;Password=218921aa");
             connection.Open();
             string queryString = "SELECT * FROM [user]";
             SqlCommand command = new SqlCommand(queryString, connection);
             SqlDataReader reader = command.ExecuteReader();
+            int col=0;//Nerede bulunduğuna dair bir satır sayısı tutacak değişken
             while (reader.Read())
             {
-                if (reader["username"].ToString() == textBoxUsername.Text 
-                    && reader["password"].ToString() == textBoxPassword.Text) 
+                if (reader["username"].ToString() == textbox_username.Text 
+                    && reader["password"].ToString() == textbox_username.Text) 
                 {
                     login = true;
-                    RestaurantSystem.Program.userName = textBoxUsername.Text;
+                    Program.loginCol = col;//Eğer giriş yapılmışsa database'de hangi satırda olduğunun kaydını tutar
                     break;
                 }
-            }
-            if(login)
-            {
-                MessageBox.Show("Tebrikler, Başarıyla Giriş Yaptınız...");
-            }
-            else
-            {
-                MessageBox.Show("Kullanıcı adı veya şifre yanlış girildi...");
+                col++;
             }
             connection.Close();
-            */
+            if (login)
+            {
+                this.Hide();
+                Form mainScreen = new MainScreen();
+                mainScreen.Closed += (s, args) => this.Close();
+                mainScreen.Show();
+                
+            }
+            else label_message.Text = "Kullanıcı adı veya şifre yanlış girildi...";
+        }
+        private void buttonSignIn_Test(object sender, EventArgs e)
+        {
             this.Hide();
             Form mainScreen = new MainScreen();
             mainScreen.Closed += (s, args) => this.Close();
             mainScreen.Show();
         }
 
-        
-
-        
 
         private void buttonSignUp_Click(object sender, EventArgs e)
         {
@@ -85,10 +86,9 @@ namespace RestaurantSystem
         }
 
 
-        bool doShowHideActive = false;
+        bool doShowHideActive = true;
         private void buttonShowHide_Click(object sender, EventArgs e)
         {
-            
             if (doShowHideActive)
             {
                 textbox_password.UseSystemPasswordChar = false;
@@ -99,6 +99,11 @@ namespace RestaurantSystem
                 textbox_password.UseSystemPasswordChar = true;
                 doShowHideActive = true;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
