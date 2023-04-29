@@ -46,7 +46,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox_Town = new System.Windows.Forms.ComboBox();
-            this.comboBox_District = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.textbox_postalCode = new System.Windows.Forms.TextBox();
             this.richTextBox_Adress = new System.Windows.Forms.RichTextBox();
@@ -54,6 +53,7 @@
             this.button_return = new System.Windows.Forms.Button();
             this.label_message = new System.Windows.Forms.Label();
             this.button_showHide = new System.Windows.Forms.Button();
+            this.textBox_District = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textbox_username
@@ -201,11 +201,13 @@
             // 
             // comboBox_City
             // 
+            this.comboBox_City.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_City.FormattingEnabled = true;
             this.comboBox_City.Location = new System.Drawing.Point(518, 88);
             this.comboBox_City.Name = "comboBox_City";
             this.comboBox_City.Size = new System.Drawing.Size(251, 21);
             this.comboBox_City.TabIndex = 16;
+            this.comboBox_City.SelectedIndexChanged += new System.EventHandler(this.comboBox_City_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -234,19 +236,13 @@
             // 
             // comboBox_Town
             // 
+            this.comboBox_Town.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_Town.FormattingEnabled = true;
             this.comboBox_Town.Location = new System.Drawing.Point(518, 127);
             this.comboBox_Town.Name = "comboBox_Town";
             this.comboBox_Town.Size = new System.Drawing.Size(251, 21);
             this.comboBox_Town.TabIndex = 19;
-            // 
-            // comboBox_District
-            // 
-            this.comboBox_District.FormattingEnabled = true;
-            this.comboBox_District.Location = new System.Drawing.Point(518, 166);
-            this.comboBox_District.Name = "comboBox_District";
-            this.comboBox_District.Size = new System.Drawing.Size(251, 21);
-            this.comboBox_District.TabIndex = 20;
+            this.comboBox_Town.SelectedIndexChanged += new System.EventHandler(this.comboBox_Town_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -332,12 +328,21 @@
             this.button_showHide.UseVisualStyleBackColor = false;
             this.button_showHide.Click += new System.EventHandler(this.buttonShowHide_Click);
             // 
+            // textBox_District
+            // 
+            this.textBox_District.Location = new System.Drawing.Point(518, 169);
+            this.textBox_District.Name = "textBox_District";
+            this.textBox_District.Size = new System.Drawing.Size(250, 20);
+            this.textBox_District.TabIndex = 28;
+            this.textBox_District.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // SignupScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(804, 461);
+            this.Controls.Add(this.textBox_District);
             this.Controls.Add(this.label_message);
             this.Controls.Add(this.button_return);
             this.Controls.Add(this.button_showHide);
@@ -345,7 +350,6 @@
             this.Controls.Add(this.richTextBox_Adress);
             this.Controls.Add(this.textbox_postalCode);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.comboBox_District);
             this.Controls.Add(this.comboBox_Town);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -390,7 +394,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox comboBox_Town;
-        private System.Windows.Forms.ComboBox comboBox_District;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textbox_postalCode;
         private System.Windows.Forms.RichTextBox richTextBox_Adress;
@@ -398,5 +401,6 @@
         private System.Windows.Forms.Button button_showHide;
         private System.Windows.Forms.Button button_return;
         private System.Windows.Forms.Label label_message;
+        private System.Windows.Forms.TextBox textBox_District;
     }
 }

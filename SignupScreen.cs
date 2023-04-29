@@ -16,6 +16,17 @@ namespace RestaurantSystem
         public SignupScreen()
         {
             InitializeComponent();
+            SqlConnection conn = new SqlConnection(@"Data Source=127.0.0.1\SQLEXPRESS,1433;Network Library=DBMSSOCN;Initial Catalog=RestaurantSystem;User ID=SA;Password=218921aa");
+            conn.Open();
+            string queryString = "SELECT * FROM [city]";
+            SqlCommand command = new SqlCommand(queryString, conn);
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string city = reader["city"].ToString();
+                comboBox_City.Items.Add(city);
+            }
+            conn.Close();
         }
 
         private void buttonSignUp_Click(object sender, EventArgs e)
@@ -65,14 +76,36 @@ namespace RestaurantSystem
                     command.Parameters.AddWithValue("@phoneNumber", textbox_phone.Text);
 
                     int rowsAffected = command.ExecuteNonQuery();
-
+                    int user_id=1;
+                    queryString = "Select * FROM [user]";
+                    command = new SqlCommand(queryString, connection);
+                    reader = command.ExecuteReader();
+                    while(reader.Read())
+                    {
+                        user_id = (int)reader["id"];
+                    }
+                    MessageBox.Show(user_id.ToString());
+                    reader.Close();
+                    queryString = "Select * FROM [towns]";
+                    command = new SqlCommand(queryString, connection);
+                    reader = command.ExecuteReader();
+                    int townid=0;
+                    while(reader.Read())
+                    {
+                        if (reader["town"].ToString().Equals(comboBox_Town.Text))
+                        {
+                            townid = (int)reader["id"];
+                        }
+                    }
+                    reader.Close();
                     queryString = "INSERT INTO [adress] (userid, cityid, townid,district,postalcode,adresstext) VALUES (@userid, @cityid, @townid, @district, @postalcode, @adresstext)";
-                    command.Parameters.AddWithValue("@userid", textbox_username.Text);
-                    command.Parameters.AddWithValue("@cityid", textbox_password.Text);
-                    command.Parameters.AddWithValue("@townid", textbox_name.Text);
-                    command.Parameters.AddWithValue("@district", textbox_surname.Text);
-                    command.Parameters.AddWithValue("@postalcode", textbox_email.Text);
-                    command.Parameters.AddWithValue("@adresstext", textbox_phone.Text);
+                    command.Parameters.AddWithValue("@userid", user_id);
+                    command.Parameters.AddWithValue("@cityid", comboBox_City.SelectedIndex + 1);
+                    command.Parameters.AddWithValue("@townid", townid);
+                    command.Parameters.AddWithValue("@district", textBox_District.Text);
+                    command.Parameters.AddWithValue("@postalcode", textbox_postalCode.Text);
+                    command.Parameters.AddWithValue("@adresstext", richTextBox_Adress.Text);
+                    int _rowsAffected = command.ExecuteNonQuery();
                     connection.Close();
 
                     MessageBox.Show("Kayıt Başarıyla Oluşturuldu");
@@ -135,9 +168,35 @@ namespace RestaurantSystem
                 || textbox_email.Text.Equals("")
                 || textbox_phone.Text.Equals("")
                 || textbox_postalCode.Text.Equals("")
+                || textBox_District.Text.Equals("")
                 ) return true;
             else return false;
         }
 
+        private void comboBox_City_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox_Town.Items.Clear();
+            SqlConnection conn = new SqlConnection(@"Data Source=127.0.0.1\SQLEXPRESS,1433;Network Library=DBMSSOCN;Initial Catalog=RestaurantSystem;User ID=SA;Password=218921aa");
+            conn.Open();
+            int id = comboBox_City.SelectedIndex + 1;
+            string queryString = string.Format("SELECT * FROM [towns] where city_id = {0}", id);
+            SqlCommand command = new SqlCommand(queryString, conn);
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                comboBox_Town.Items.Add(reader["town"]);
+            }
+            conn.Close();
+        }
+
+        private void comboBox_Town_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
