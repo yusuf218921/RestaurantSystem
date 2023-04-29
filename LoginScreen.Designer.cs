@@ -56,7 +56,7 @@
             this.button_signin.TabIndex = 0;
             this.button_signin.Text = "Giriş Yap";
             this.button_signin.UseVisualStyleBackColor = true;
-            this.button_signin.Click += new System.EventHandler(this.buttonSignIn_Test);
+            this.button_signin.Click += new System.EventHandler(this.buttonSignIn_Click);
             // 
             // textbox_password
             // 

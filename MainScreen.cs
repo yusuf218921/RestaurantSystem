@@ -13,17 +13,22 @@ namespace RestaurantSystem
 {
     public partial class MainScreen : Form
     {
+        User user;
         private static Button currentMainButton;
-        public MainScreen()
+        public MainScreen(User user)
         {
             InitializeComponent();
+            this.user = user;
             profile_username.Text = "Kullanıcı Adı: " +"";
             profile_name.Text = "İsim: " + "";
             profile_email.Text = "E posta: " + "";
             profile_surname.Text = "Soyisim: " + "";
             profile_tel.Text = "Telefon: " + "";
             changeCurrentMainButton(button_makeAppointment);
+            
         }
+
+
         //
         //Sol sekmedeki butonlar
         //
@@ -114,6 +119,8 @@ namespace RestaurantSystem
         //Profil görüntüle sayfası buttonları
         //
         bool doesEditActive = false;
+        
+
         private void profile_button_edit_Click(object sender, EventArgs e)
         {
             if(doesEditActive)

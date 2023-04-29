@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 namespace RestaurantSystem
 {
-    public class Address
+    internal class Class1
     {
-        string city;
-        string town;
-        string district;
-        string postalCode;
-        string address;
     }
 }

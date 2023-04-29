@@ -13,6 +13,7 @@ namespace RestaurantSystem
 {
     public partial class LoginScreen : Form
     {
+        public User user;
         public LoginScreen()
         {
             InitializeComponent();
@@ -20,28 +21,36 @@ namespace RestaurantSystem
         bool login = false;
         private void buttonSignIn_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(@"Data Source=127.0.0.1\SQLEXPRESS,1433;Network Library=DBMSSOCN;Initial Catalog=RestaurantSystem;User ID=SA;Password=218921aa");
+            DBHelper db = new DBHelper();
+            SqlConnection connection = db.SqlConnection;
             connection.Open();
             string queryString = "SELECT * FROM [user]";
             SqlCommand command = new SqlCommand(queryString, connection);
             SqlDataReader reader = command.ExecuteReader();
-            int col=0;//Nerede bulunduğuna dair bir satır sayısı tutacak değişken
             while (reader.Read())
             {
                 if (reader["username"].ToString() == textbox_username.Text 
                     && reader["password"].ToString() == textbox_username.Text) 
                 {
+                    string username = reader["username"].ToString();
+                    string password = reader["password"].ToString();
+                    string firstname = reader["firstname"].ToString();
+                    string lastname = reader["lastname"].ToString();
+                    string email = reader["email"].ToString();
+                    string tel = reader["phoneNumber"].ToString();
+                    int user_id = (int)reader["id"];
+
+                    user = new User(user_id,username,password,firstname,lastname,email,tel);
                     login = true;
-                    Program.loginCol = col;//Eğer giriş yapılmışsa database'de hangi satırda olduğunun kaydını tutar
                     break;
                 }
-                col++;
+                
             }
             connection.Close();
             if (login)
             {
                 this.Hide();
-                Form mainScreen = new MainScreen();
+                Form mainScreen = new MainScreen(user);
                 mainScreen.Closed += (s, args) => this.Close();
                 mainScreen.Show();
                 
@@ -50,10 +59,7 @@ namespace RestaurantSystem
         }
         private void buttonSignIn_Test(object sender, EventArgs e)
         {
-            this.Hide();
-            Form mainScreen = new MainScreen();
-            mainScreen.Closed += (s, args) => this.Close();
-            mainScreen.Show();
+
         }
 
 
