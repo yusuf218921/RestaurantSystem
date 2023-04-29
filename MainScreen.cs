@@ -93,6 +93,7 @@ namespace RestaurantSystem
                     page_showReservations_text.Text += "\n" + reservation.Restourant + " - " + reservation.Date.Substring(0, 10) + " - "
                     + reservation.Hour.Substring(0, 5);
                 }
+                i++;
             }
         }
         //
