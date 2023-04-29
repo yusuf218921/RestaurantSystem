@@ -11,15 +11,15 @@ using System.Data.SqlClient;
 
 namespace RestaurantSystem
 {
-    public partial class Form1 : Form
+    public partial class LoginScreen : Form
     {
-        public Form1()
+        public LoginScreen()
         {
             InitializeComponent();
         }
 
         private void buttonSignIn_Click(object sender, EventArgs e)
-        {
+        {/*
             bool login = false;
             SqlConnection connection = new SqlConnection(@"Data Source=127.0.0.1\SQLEXPRESS,1433;Network Library=DBMSSOCN;Initial Catalog=RestaurantSystem;User ID=SA;Password=218921aa");
             connection.Open();
@@ -32,6 +32,7 @@ namespace RestaurantSystem
                     && reader["password"].ToString() == textBoxPassword.Text) 
                 {
                     login = true;
+                    RestaurantSystem.Program.userName = textBoxUsername.Text;
                     break;
                 }
             }
@@ -44,6 +45,11 @@ namespace RestaurantSystem
                 MessageBox.Show("Kullanıcı adı veya şifre yanlış girildi...");
             }
             connection.Close();
+            */
+            this.Hide();
+            Form mainScreen = new MainScreen();
+            mainScreen.Closed += (s, args) => this.Close();
+            mainScreen.Show();
         }
 
         
@@ -52,8 +58,10 @@ namespace RestaurantSystem
 
         private void buttonSignUp_Click(object sender, EventArgs e)
         {
-            Form2 frm = new Form2();
-            frm.Show();
+            this.Hide();
+            Form signupScreen = new SignupScreen();
+            signupScreen.Closed += (s, args) => this.Close();
+            signupScreen.Show();
         }
 
       
@@ -65,8 +73,10 @@ namespace RestaurantSystem
 
         private void label3_Click(object sender, EventArgs e)
         {
-            Form3 frm3 = new Form3();
-            frm3.Show();
+            this.Hide();
+            Form forgotPasswordScreen = new ForgotPasswordScreen();
+            forgotPasswordScreen.Closed += (s, args) => this.Close();
+            forgotPasswordScreen.Show();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -74,24 +84,20 @@ namespace RestaurantSystem
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
-        bool doButton1Active = false;
-        private void button1_Click(object sender, EventArgs e)
+        bool doShowHideActive = false;
+        private void buttonShowHide_Click(object sender, EventArgs e)
         {
             
-            if (doButton1Active)
+            if (doShowHideActive)
             {
-                textBoxPassword.UseSystemPasswordChar = false;
-                doButton1Active = false;
+                textbox_password.UseSystemPasswordChar = false;
+                doShowHideActive = false;
             }
             else
             {
-                textBoxPassword.UseSystemPasswordChar = true;
-                doButton1Active = true;
+                textbox_password.UseSystemPasswordChar = true;
+                doShowHideActive = true;
             }
         }
     }

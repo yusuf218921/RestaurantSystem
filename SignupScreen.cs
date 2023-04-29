@@ -11,23 +11,11 @@ using System.Windows.Forms;
 
 namespace RestaurantSystem
 {
-    public partial class Form2 : Form
+    public partial class SignupScreen : Form
     {
-        public Form2()
+        public SignupScreen()
         {
             InitializeComponent();
-        }
-
-        private void checkBoxShowPassword_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBoxShowPassword.CheckState == CheckState.Checked)
-            {
-                textBoxPassword.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                textBoxPassword.UseSystemPasswordChar = true;
-            }
         }
 
         private void buttonSignUp_Click(object sender, EventArgs e)
@@ -65,7 +53,7 @@ namespace RestaurantSystem
                 queryString = "INSERT INTO [user] (username, password, firstname,lastname,email,phoneNumber) VALUES (@username, @password, @firstname,@lastname,@email,@phoneNumber)";
                 command = new SqlCommand(queryString, connection);
                 command.Parameters.AddWithValue("@username", textBoxUsername.Text);
-                command.Parameters.AddWithValue("@password", textBoxPassword.Text);
+                command.Parameters.AddWithValue("@password", textbox_password.Text);
                 command.Parameters.AddWithValue("@firstname", textBoxFirstName.Text);
                 command.Parameters.AddWithValue("@lastname", textBoxLastname.Text);
                 command.Parameters.AddWithValue("@email", textBoxEmail.Text);
@@ -92,29 +80,20 @@ namespace RestaurantSystem
             }
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        bool doShowHideActive = false;
+        private void buttonShowHide_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBoxTown_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBoxCity_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            if (doShowHideActive)
+            {
+                textbox_password.UseSystemPasswordChar = false;
+                doShowHideActive = false;
+            }
+            else
+            {
+                textbox_password.UseSystemPasswordChar = true;
+                doShowHideActive = true;
+            }
         }
     }
 }
