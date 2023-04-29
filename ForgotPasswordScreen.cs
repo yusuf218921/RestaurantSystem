@@ -27,7 +27,8 @@ namespace RestaurantSystem
             else
             {
                 bool doFound = false;
-                SqlConnection connection = new SqlConnection(@"Data Source=(127.0.0.1)\SQLEXPRESS,1433;Network Library=DBMSSOCN;Initial Catalog=RestaurantSystem;User ID=SA;Password=218921aa");
+                DBHelper db = new DBHelper();
+                SqlConnection connection = db.SqlConnection;
                 connection.Open();
                 string queryString = "SELECT * FROM [user]";
                 SqlCommand command = new SqlCommand(queryString, connection);

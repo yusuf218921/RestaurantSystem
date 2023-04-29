@@ -278,7 +278,7 @@ namespace RestaurantSystem
             // 
             // page_makeApp_detail_timePicker
             // 
-            this.page_makeApp_detail_timePicker.CustomFormat = "HH";
+            this.page_makeApp_detail_timePicker.CustomFormat = "HH:mm";
             this.page_makeApp_detail_timePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.page_makeApp_detail_timePicker.Location = new System.Drawing.Point(570, 165);
             this.page_makeApp_detail_timePicker.Name = "page_makeApp_detail_timePicker";

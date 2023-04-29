@@ -19,5 +19,10 @@ namespace RestaurantSystem
             this.date = date;
             this.hour = hour;
         }
+
+        public string Restourant {  get { return restourant; } }
+        public string Date { get { return date; } }
+        public string Hour { get { return hour;} }
+        public string Username { get { return username; } }
     }
 }

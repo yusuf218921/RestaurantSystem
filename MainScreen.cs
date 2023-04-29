@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -25,7 +26,21 @@ namespace RestaurantSystem
             profile_surname.Text = "Soyisim: " + user.Surname;
             profile_tel.Text = "Telefon: " + user.Tel;
             changeCurrentMainButton(button_makeAppointment);
-            
+            DBHelper db = new DBHelper();
+            SqlConnection connection = db.SqlConnection;
+            connection.Open();
+            string queryString = "Select * from [reservation] where customer_id = " + user.Id;
+            SqlCommand command = new SqlCommand(queryString, connection);
+            SqlDataReader reader = command.ExecuteReader();
+            while(reader.Read())
+            {
+                string date = reader["reservation_date"].ToString();
+                string time = reader["reservation_time"].ToString();
+                string restourant_name = reader["restaurant_name"].ToString();
+                Reservation reservation = new Reservation(restourant_name, date, time, user.Username);
+                user.Reservations.Add(reservation);
+            }
+            connection.Close();
         }
 
 
@@ -42,6 +57,7 @@ namespace RestaurantSystem
             
             pageController.SelectedTab = page_showReservations;
             changeCurrentMainButton(button_showAppointments);
+            listReservations();
         }
         private void button_profile_Click(object sender, EventArgs e)
         {
@@ -62,10 +78,12 @@ namespace RestaurantSystem
         
         private void listReservations()
         {
+            show_reservations.Text = "";
             //loginCol kullanılarak satırdaki kişiden reservasyonlar çekilecek
-            for(int i = 0;i<100;i++)
+            foreach (Reservation reservation in user.Reservations)
             {
-                show_reservations.Text += "\n" + "";
+                show_reservations.Text += "\n" + reservation.Restourant + " - " + reservation.Date.Substring(0,12) + " - "
+                    + reservation.Hour;
             }
         }
         //
@@ -193,9 +211,26 @@ namespace RestaurantSystem
 
         private void page_makeApp_detail_confirm_Click(object sender, EventArgs e)
         {
-            String date = page_makeApp_detail_datePicker.ToString();
-            String hour = page_makeApp_detail_timePicker.ToString();
-            
+            DateTime datetime = page_makeApp_detail_datePicker.Value;
+            String date = datetime.ToString("yyyy-MM-dd");
+            DateTime time = page_makeApp_detail_timePicker.Value;
+            String _time = time.ToString("HH:mm:ss");
+            DBHelper dBHelper = new DBHelper();
+            SqlConnection connection = dBHelper.SqlConnection;
+            connection.Open();
+            string queryString = "INSERT INTO [reservation] (reservation_date, reservation_time, restaurant_name, customer_id) VALUES (@reservation_date, @reservation_time, @restaurant_name, @customer_id)";
+            SqlCommand command = new SqlCommand(queryString, connection);
+
+            command.Parameters.AddWithValue("@reservation_date", date);
+            command.Parameters.AddWithValue("@reservation_time", _time);
+            command.Parameters.AddWithValue("@restaurant_name", page_makeApp_detail_title.Text);
+            command.Parameters.AddWithValue("@customer_id", user.Id);
+            int rowsAffected = command.ExecuteNonQuery();
+            connection.Close();
+
+            Reservation reservation = new Reservation(page_makeApp_detail_title.Text,date,_time,user.Username);
+            user.Reservations.Add(reservation);
+            MessageBox.Show("Randevu başarıyla alındı");
         }
     }
 }

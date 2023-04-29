@@ -16,7 +16,8 @@ namespace RestaurantSystem
         public SignupScreen()
         {
             InitializeComponent();
-            SqlConnection conn = new SqlConnection(@"Data Source=127.0.0.1\SQLEXPRESS,1433;Network Library=DBMSSOCN;Initial Catalog=RestaurantSystem;User ID=SA;Password=218921aa");
+            DBHelper db = new DBHelper();
+            SqlConnection conn = db.SqlConnection;
             conn.Open();
             string queryString = "SELECT * FROM [city]";
             SqlCommand command = new SqlCommand(queryString, conn);
@@ -98,13 +99,14 @@ namespace RestaurantSystem
                         }
                     }
                     reader.Close();
-                    queryString = "INSERT INTO [adress] (userid, cityid, townid,district,postalcode,adresstext) VALUES (@userid, @cityid, @townid, @district, @postalcode, @adresstext)";
+                    queryString = "INSERT INTO [adress] (userid, cityid, townid,district,postalcode,addresstext) VALUES (@userid, @cityid, @townid, @district, @postalcode, @addresstext)";
+                    command = new SqlCommand(queryString, connection);
                     command.Parameters.AddWithValue("@userid", user_id);
                     command.Parameters.AddWithValue("@cityid", comboBox_City.SelectedIndex + 1);
                     command.Parameters.AddWithValue("@townid", townid);
                     command.Parameters.AddWithValue("@district", textBox_District.Text);
                     command.Parameters.AddWithValue("@postalcode", textbox_postalCode.Text);
-                    command.Parameters.AddWithValue("@adresstext", richTextBox_Adress.Text);
+                    command.Parameters.AddWithValue("@addresstext", richTextBox_Adress.Text);
                     int _rowsAffected = command.ExecuteNonQuery();
                     connection.Close();
 
@@ -176,7 +178,8 @@ namespace RestaurantSystem
         private void comboBox_City_SelectedIndexChanged(object sender, EventArgs e)
         {
             comboBox_Town.Items.Clear();
-            SqlConnection conn = new SqlConnection(@"Data Source=127.0.0.1\SQLEXPRESS,1433;Network Library=DBMSSOCN;Initial Catalog=RestaurantSystem;User ID=SA;Password=218921aa");
+            DBHelper db = new DBHelper();
+            SqlConnection conn = db.SqlConnection;
             conn.Open();
             int id = comboBox_City.SelectedIndex + 1;
             string queryString = string.Format("SELECT * FROM [towns] where city_id = {0}", id);

@@ -33,14 +33,24 @@ namespace RestaurantSystem
         {
             reservations.Add(reservation);
         }
-
+        public int Id { get { return id; } }
         public string Username { get { return username; } }
         public string Password { get { return password; } }
         public string Name { get { return name; } }
         public string Surname { get {  return surname; } }
         public string Email { get { return email; } }
-        public string Tel { get { return tel; } } 
-        public List<Reservation> Reservations { get {  return reservations; } }
+        public string Tel { get { return tel; } }
+        public List<Reservation> Reservations
+        {
+            get
+            {
+                return reservations;
+            }
+            set
+            {
+                reservations = value;
+            }
+        }
 
     }
 }
